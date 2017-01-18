@@ -97,3 +97,71 @@ magicSkill.magicArrowMp = 5;
 | \?  | Literal question mark  | 물음표  |
 | \ ooo  | ASCII character in octal notation  | 아스키 문자의 8진수 표기  |
 | \xhh  |  ASCII character in hexadecimal notation | 아스키 문자의 16진수 표기  |
+
+
+9.@class
+
+@class Human;
+
+* 현재 파일에 Human이라는 클래스(파일)가 존재 한다고 알려주는것 프로퍼티가 무엇인지 메서드가 무엇인지는 알려주지 않음.
+
+`#import Humnan.h;`
+
+* 현재 파일에 Human클래스 헤더파일에 있는 프로퍼티 및 메서드 등의 내용을 읽어 들이는것.
+
+-왜 사용하는가?
+
+* 메개변수 사용시 두 클래스 모두에 import하면 계속해서 읽어들이기만하여 무한루프 생성가능
+
+10.self
+
+* 객체 스스로 자신을 지칭할 때 사용하는 키워드
+
+* `[self someMethod:value];` : 자신의 메서드 호출
+
+* self.someProperty : 자신의 프로퍼티 접근
+
+11.다형성
+
+* 프로그램 언어의 각 요소들(상수, 변수, 식, 오브젝트, 함수, 메소드 등)이 다양한 데이터 타입에 속하는 것이 허가되는 성질.
+
+* 다형성이란 하나의 메소드나 클래스가 있을 때 이것들이 다양한 방법으로 동작하는 것을 의미한다. 키보드의 키를 통해서 비유를 들어보겠다. 키보드의 키를 사용하는 방법은 '누른다'이다. 하지만 똑같은 동작 방법의 키라고 하더라도 ESC는 취소를 ENTER는 실행의 목적을 가지고 있다. 즉, 동일한 조작방법으로 동작시키지만 동작방법은 다른 것을 의미한다.
+>출처 : https://opentutorials.org/module/516/6127
+['다형성'](https://opentutorials.org/module/516/6127){: target="_blank" }
+
+@class Orc;
+
+@class Magic;
+
+@interface Human : NSObject
+
+@property NSString *name;
+
+@property NSUInteger hp;
+
+@property NSUInteger mp;
+
+@property NSUInteger mAp;
+
+@property NSUInteger mDef;
+
+
+Vs.
+
+@class Human;
+
+@class Magic;
+
+@interface Orc : NSObject
+
+@property NSString *name;
+
+@property NSUInteger hp;
+
+@property NSUInteger mp;
+
+@property NSUInteger mAp;
+
+@property NSUInteger mDef;
+
+
