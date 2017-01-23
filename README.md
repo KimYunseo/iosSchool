@@ -34,3 +34,8 @@
   [8]: https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170119/inheritance.md
   * [초기화][9]
   [9]: https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170120/CustomInitialize.md
+  * [클래스 및 객체, 메서드 심화][10]
+  [10]:  https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170123/classObjectFunction.md
+  
+  * [프레임워크와 라이브러리][11]
+  [11]: https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170123/libraryFramwork.md
