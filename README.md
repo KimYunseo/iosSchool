@@ -1,6 +1,9 @@
 Ⅰ.프로젝트
 ========
 
+ * [윤년에 따른 D-Day 구하기]()
+
+
 Ⅱ.프로그래밍 기초
 ============= 
  
@@ -43,6 +46,8 @@
   
   * [프레임워크와 라이브러리][11]
   [11]: https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170123/libraryFramwork.md
+  
+  * [반복문 및 조건문](https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170201/fountionIfSwitchForWhile.md)
   
   ------------------
   
