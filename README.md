@@ -1,7 +1,7 @@
 Ⅰ.프로젝트
 ========
 
- * [윤년에 따른 D-Day 구하기]()
+ * [윤년에 따른 D-Day 구하기](https://github.com/KimYunseo/iosSchool/tree/master/DailySummarizing/170131/PracticeHard01)
 
 
 Ⅱ.프로그래밍 기초
