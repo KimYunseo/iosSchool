@@ -2,77 +2,81 @@
 
  * 정의 : 부가적인 정보
  * 이유 : 객체가 특정행위를 하려면 부가적인 정보가 필요함. 즉, 메서드를 호출할 때 부가적인 정보를 보내기 위해 매개변수를 사용한다.
-
-		 - (<반환타입>)메서드 이름:(<타입>)<내부이름> <외부이름>:<내부이름>:....;
+		
+		- (<반환타입>)메서드 이름:(<타입>)<내부이름> <외부이름>:<내부이름>:....;
 
 2.매개변수 메서드 정의
 
-		 - (void)magicAttackTo:(Orc *)orc byMagicArrow:(Magic *)magicArrow;
+```objc
+- (void)magicAttackTo:(Orc *)orc byMagicArrow:(Magic *)magicArrow;
+```
 
 3.매개변수 메서드 구현
 
-		 - (void)magicAttackTo:(Orc *)orc byMagicArrow:(Magic *)magicArrow{
-		
-		   //마법 공격을 하면 마법공격력+마법스킬공격력 - 마법디펜스가 총 데미지가 됨.
-		
-		      NSUInteger damage = self.mAp + magicArrow.magicArrowDamage - orc.mDef;
-		
-		  orc.hp = orc.hp - damage;
-		
-		  NSLog(@"%@은 마법화살 공격을 받아 %lu의 데미지를 입어 HP가 %lu가. 되었다.\n", orc.name, damage, orc.hp);
-		
-		  //휴먼의 mp가 줄어드는것을 구현
-		
-		 self.mp = self.mp - magicArrow.magicArrowMp;
-		
-		  NSLog(@"%@는 마법화살을 사용하여 %lu의 MP를 소모하여 %lu의 MP가. 남았습니다.\n\n", self.name, magicArrow.magicArrowMp, self.mp);
+```objc
+- (void)magicAttackTo:(Orc *)orc byMagicArrow:(Magic *)magicArrow{
 	
-	  }
-
+//마법 공격을 하면 마법공격력+마법스킬공격력 - 마법디펜스가 총 데미지가 됨.
+	
+NSUInteger damage = self.mAp + magicArrow.magicArrowDamage - orc.mDef;
+	
+orc.hp = orc.hp - damage;
+	
+NSLog(@"%@은 마법화살 공격을 받아 %lu의 데미지를 입어 HP가 %lu가. 되었다.\n", orc.name, damage, orc.hp);
+	
+//휴먼의 mp가 줄어드는것을 구현
+	
+self.mp = self.mp - magicArrow.magicArrowMp;
+	
+NSLog(@"%@는 마법화살을 사용하여 %lu의 MP를 소모하여 %lu의 MP가. 남았습니다.\n\n", self.name, magicArrow.magicArrowMp, self.mp);
+	
+}
+```
 4.메서드 호출
 
-----------------------------------------
+```objc
+//----------------------------------------
 
-		 Human *h1 = [[Human alloc] init];
-		
-		 h1.name = @"인간마법사 뿌뿌뿡";
-		
-		 h1.hp = 250;
-		
-		 h1.mp = 150;
-		
-		 h1.mAp = 10;
-		
-		 h1.mDef = 5;
+Human *h1 = [[Human alloc] init];
+	
+h1.name = @"인간마법사 뿌뿌뿡";
+	
+h1.hp = 250;
+	
+h1.mp = 150;
+	
+h1.mAp = 10;
+	
+h1.mDef = 5;
 
-----------------------------------------
+//----------------------------------------
 
-		 Orc *o1 = [[Orc alloc] init];
-		
-		 o1.name = @"오크마법사 큐티엔젤";
-		
-		 o1.hp = 300;
-		
-		 o1.mp = 100;
-		
-		 o1.mAp = 7;
-		
-		 o1.mDef = 7;
-
-
-----------------------------------------
-
-		 Magic *magicSkill = [[Magic alloc] init];
-		
-		 magicSkill.magicArrowDamage = 10;
-		
-		 magicSkill.magicArrowMp = 5;
+Orc *o1 = [[Orc alloc] init];
+	
+o1.name = @"오크마법사 큐티엔젤";
+	
+o1.hp = 300;
+	
+o1.mp = 100;
+	
+o1.mAp = 7;
+	
+o1.mDef = 7;
 
 
-----------------------------------------
+//----------------------------------------
 
-		 h1 magicAttackTo:o1 byMagicArrow:magicSkill];
+Magic *magicSkill = [[Magic alloc] init];
+	
+magicSkill.magicArrowDamage = 10;
+	
+magicSkill.magicArrowMp = 5;
 
+
+//----------------------------------------
+
+h1 magicAttackTo:o1 byMagicArrow:magicSkill];
+```
 
 5.데이터 타입
 
@@ -154,41 +158,43 @@
  >출처 : https://opentutorials.org/module/516/6127
 ['다형성'](https://opentutorials.org/module/516/6127)
 
-		 @class Orc;
-		
-		 @class Magic;
-		
-		 @interface Human : NSObject
-		
-		 @property NSString *name;
-		
-		 @property NSUInteger hp;
-		
-		 @property NSUInteger mp;
-		
-		 @property NSUInteger mAp;
-		
-		 @property NSUInteger mDef;
-
+```objc
+ @class Orc;
+	
+ @class Magic;
+	
+ @interface Human : NSObject
+	
+ @property NSString *name;
+	
+ @property NSUInteger hp;
+	
+ @property NSUInteger mp;
+	
+ @property NSUInteger mAp;
+	
+ @property NSUInteger mDef;
+```
 
  Vs.
 
-		 @class Human;
-		
-		 @class Magic;
-		
-		 @interface Orc : NSObject
-		
-		 @property NSString *name;
-		
-		 @property NSUInteger hp;
-		
-		 @property NSUInteger mp;
-		
-		 @property NSUInteger mAp;
-		
-		 @property NSUInteger mDef;
-
+```objc
+@class Human;
+	
+@class Magic;
+	
+@interface Orc : NSObject
+	
+@property NSString *name;
+	
+@property NSUInteger hp;
+	
+@property NSUInteger mp;
+	
+@property NSUInteger mAp;
+	
+@property NSUInteger mDef;
+```
 
 -오버로딩
 

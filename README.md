@@ -18,6 +18,10 @@
   * [소프트웨어 공학, 프로그래밍 언어, 객체지향 프로그래밍, 프로그래밍 용어][5]
   [5]: https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170109_170113/softEng_progLang.md
   
+2.자료구조
+
+
+  
 
 Ⅲ.iOS 앱 개발
 ============
@@ -39,6 +43,8 @@
   
   * [프레임워크와 라이브러리][11]
   [11]: https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170123/libraryFramwork.md
+  
+  ------------------
   
   * [자주 사용하는 메서드 정리][12]
   [12]: https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170131/todaySummary.md
