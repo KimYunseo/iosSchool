@@ -233,4 +233,4 @@ int main(int argc, const char * argv[]) {
 
 3.D-Day (2015/12/09 ~ 2017/03/27)
 
-[결과](https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170131/PracticeHard01/leapYearResult.png)
+![결과](https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170131/PracticeHard01/leapYearResult.png)
