@@ -1,0 +1,324 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		441F8D8B1E46F38200B4654E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 441F8D8A1E46F38200B4654E /* main.m */; };
+		441F8D8E1E46F38200B4654E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 441F8D8D1E46F38200B4654E /* AppDelegate.m */; };
+		441F8D911E46F38200B4654E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 441F8D901E46F38200B4654E /* ViewController.m */; };
+		441F8D941E46F38200B4654E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441F8D921E46F38200B4654E /* Main.storyboard */; };
+		441F8D961E46F38200B4654E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 441F8D951E46F38200B4654E /* Assets.xcassets */; };
+		441F8D991E46F38200B4654E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441F8D971E46F38200B4654E /* LaunchScreen.storyboard */; };
+		441F8DA11E47144900B4654E /* cardBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 441F8DA01E47144900B4654E /* cardBack.png */; };
+		441F8DA41E4740D100B4654E /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 441F8DA31E4740D100B4654E /* TestClass.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		441F8D861E46F38200B4654E /* GaChaPractice01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GaChaPractice01.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		441F8D8A1E46F38200B4654E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		441F8D8C1E46F38200B4654E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		441F8D8D1E46F38200B4654E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		441F8D8F1E46F38200B4654E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		441F8D901E46F38200B4654E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		441F8D931E46F38200B4654E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		441F8D951E46F38200B4654E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		441F8D981E46F38200B4654E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		441F8D9A1E46F38200B4654E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		441F8DA01E47144900B4654E /* cardBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardBack.png; sourceTree = "<group>"; };
+		441F8DA21E4740D100B4654E /* TestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestClass.h; sourceTree = "<group>"; };
+		441F8DA31E4740D100B4654E /* TestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestClass.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		441F8D831E46F38200B4654E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		441F8D7D1E46F38200B4654E = {
+			isa = PBXGroup;
+			children = (
+				441F8D881E46F38200B4654E /* GaChaPractice01 */,
+				441F8D871E46F38200B4654E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		441F8D871E46F38200B4654E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				441F8D861E46F38200B4654E /* GaChaPractice01.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		441F8D881E46F38200B4654E /* GaChaPractice01 */ = {
+			isa = PBXGroup;
+			children = (
+				441F8D8C1E46F38200B4654E /* AppDelegate.h */,
+				441F8D8D1E46F38200B4654E /* AppDelegate.m */,
+				441F8D8F1E46F38200B4654E /* ViewController.h */,
+				441F8D901E46F38200B4654E /* ViewController.m */,
+				441F8DA21E4740D100B4654E /* TestClass.h */,
+				441F8DA31E4740D100B4654E /* TestClass.m */,
+				441F8D921E46F38200B4654E /* Main.storyboard */,
+				441F8DA01E47144900B4654E /* cardBack.png */,
+				441F8D951E46F38200B4654E /* Assets.xcassets */,
+				441F8D971E46F38200B4654E /* LaunchScreen.storyboard */,
+				441F8D9A1E46F38200B4654E /* Info.plist */,
+				441F8D891E46F38200B4654E /* Supporting Files */,
+			);
+			path = GaChaPractice01;
+			sourceTree = "<group>";
+		};
+		441F8D891E46F38200B4654E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				441F8D8A1E46F38200B4654E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		441F8D851E46F38200B4654E /* GaChaPractice01 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 441F8D9D1E46F38200B4654E /* Build configuration list for PBXNativeTarget "GaChaPractice01" */;
+			buildPhases = (
+				441F8D821E46F38200B4654E /* Sources */,
+				441F8D831E46F38200B4654E /* Frameworks */,
+				441F8D841E46F38200B4654E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GaChaPractice01;
+			productName = GaChaPractice01;
+			productReference = 441F8D861E46F38200B4654E /* GaChaPractice01.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		441F8D7E1E46F38200B4654E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = KimYunseo;
+				TargetAttributes = {
+					441F8D851E46F38200B4654E = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 441F8D811E46F38200B4654E /* Build configuration list for PBXProject "GaChaPractice01" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 441F8D7D1E46F38200B4654E;
+			productRefGroup = 441F8D871E46F38200B4654E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				441F8D851E46F38200B4654E /* GaChaPractice01 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		441F8D841E46F38200B4654E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				441F8D991E46F38200B4654E /* LaunchScreen.storyboard in Resources */,
+				441F8D961E46F38200B4654E /* Assets.xcassets in Resources */,
+				441F8DA11E47144900B4654E /* cardBack.png in Resources */,
+				441F8D941E46F38200B4654E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		441F8D821E46F38200B4654E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				441F8DA41E4740D100B4654E /* TestClass.m in Sources */,
+				441F8D911E46F38200B4654E /* ViewController.m in Sources */,
+				441F8D8E1E46F38200B4654E /* AppDelegate.m in Sources */,
+				441F8D8B1E46F38200B4654E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		441F8D921E46F38200B4654E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				441F8D931E46F38200B4654E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		441F8D971E46F38200B4654E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				441F8D981E46F38200B4654E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		441F8D9B1E46F38200B4654E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		441F8D9C1E46F38200B4654E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		441F8D9E1E46F38200B4654E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GaChaPractice01/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.KimYunseo.GaChaPractice01;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		441F8D9F1E46F38200B4654E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GaChaPractice01/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.KimYunseo.GaChaPractice01;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		441F8D811E46F38200B4654E /* Build configuration list for PBXProject "GaChaPractice01" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				441F8D9B1E46F38200B4654E /* Debug */,
+				441F8D9C1E46F38200B4654E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		441F8D9D1E46F38200B4654E /* Build configuration list for PBXNativeTarget "GaChaPractice01" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				441F8D9E1E46F38200B4654E /* Debug */,
+				441F8D9F1E46F38200B4654E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 441F8D7E1E46F38200B4654E /* Project object */;
+}
