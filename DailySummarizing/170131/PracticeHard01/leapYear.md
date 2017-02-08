@@ -1,10 +1,29 @@
-//
-//  LeapYear.m
-//  PracticeHard01
-//
-//  Created by abyssinaong on 2017. 1. 31..
-//  Copyright © 2017년 KimYunseo. All rights reserved.
-//
+윤년구하기
+====
+
+
+* LeapYear.h
+
+
+```objc
+
+#import <Foundation/Foundation.h>
+
+@interface LeapYear : NSObject
+
++ (BOOL)isLeapYear:(NSUInteger)year;
+
++ (NSUInteger)lastDayOfMonth:(NSUInteger)month setYear:(NSUInteger)year;
+
++ (NSUInteger)firstDay:(NSString *)fDay lastDay:(NSString *)lDay;
+@end
+
+
+```
+
+* LeapYear.m
+
+```objc
 
 #import "LeapYear.h"
 
@@ -169,89 +188,49 @@ return totalNum;
 
 @end
 
+```
 
-/*
- 
- if(fYearNum != lYearNum)
- {
- //첫 년도
- if(fMonthNum != 12)
- {
- for(fMonthNum = fMonthNum + 1; fMonthNum <=12 ; fMonthNum = fMonthNum + 1 )
- {
- firstNum = firstNum + [LeapYear lastDayOfMonth:fMonthNum setYear:fYearNum];
- //                NSLog(@"%lu  %lu", fMonthNum , firstNum);
- }
- }
- firstNum = firstNum + [LeapYear lastDayOfMonth:fMonthNum setYear:fYearNum] - (fDayNum-1);
- 
- 
- //마지막 년도
- 
- if(lMonthNum != 1)
- {
- 
- for( lMonthNum = lMonthNum - 1; lMonthNum >=1; lMonthNum = lMonthNum - 1 )
- {
- 
- lastNum = lastNum + [LeapYear lastDayOfMonth:lMonthNum setYear:lYearNum];
- //                NSLog(@"마지막 년도 %lu   %lu",lMonthNum, lastNum);
- }
- }
- 
- lastNum = lastNum + lDayNum;
- 
- //중간연도
- if ( lYearNum - fYearNum > 1 )
- {
- for(fYearNum = fYearNum+1 ; fYearNum <= lYearNum - 1; fYearNum= fYearNum + 1)
- {
- if ([LeapYear isLeapYear:fYearNum])
- {
- middleNum = middleNum + 366;
- 
- }
- else
- {
- middleNum = middleNum +365;
- }
- //                NSLog(@"중간 연도 증가 %lu",fYearNum);
- }
- 
- }
- 
- 
- totalNum = firstNum + middleNum + lastNum -1 ;
- //        NSLog(@"처음 연도 값%lu",firstNum);
- //        NSLog(@"중간 연도 값 %lu",middleNum);
- //        NSLog(@"마지막 연도 값 %lu",lastNum);
- 
- 
- }
- else
- {
- firstNum = fDayNum;
- 
- if(fMonthNum != 1)
- {
- for(fMonthNum = fMonthNum - 1; fMonthNum >=1 ; fMonthNum = fMonthNum - 1 )
- {
- firstNum = firstNum + [LeapYear lastDayOfMonth:fMonthNum setYear:fYearNum];
- }
- }
- 
- 
- lastNum = lDayNum;
- 
- if(lMonthNum != 1)
- {
- 
- for( lMonthNum = lMonthNum - 1; lMonthNum >=1; lMonthNum = lMonthNum - 1 )
- {
- lastNum = lastNum + [LeapYear lastDayOfMonth:lMonthNum setYear:lYearNum];
- }
- }
- totalNum = lastNum - firstNum -1;
- 
- }
- */
+* main.h
+
+```objc
+#import <Foundation/Foundation.h>
+#import "LeapYear.h"
+
+
+int main(int argc, const char * argv[]) {
+    @autoreleasepool {
+
+        
+        BOOL yearNumber = [LeapYear isLeapYear:2000];
+        
+        if (yearNumber)
+        {
+            NSLog(@"YES");
+        }
+        else
+        {
+            NSLog(@"NO");
+        }
+        
+        NSInteger lastDayNum = [LeapYear lastDayOfMonth:2 setYear:2000];
+        NSLog(@"%lu",lastDayNum);
+        
+        NSInteger lastDayNum1 = [LeapYear lastDayOfMonth:2 setYear:1999];
+        NSLog(@"%lu",lastDayNum1);
+        
+        
+        NSUInteger totalDay = [LeapYear firstDay:@"2015/12/09" lastDay:@"2017/03/27"];
+        NSLog(@"%lu", totalDay);
+        
+    }
+    return 0;
+}
+```
+
+1.윤년인지 여부 판단 (2000년)
+
+2.특정 연도에 해당하는 달의 마지막 날 (2000년 2월, 1999년 2월)
+
+3.D-Day (2015/12/09 ~ 2017/03/27)
+
+[]()
