@@ -49,11 +49,13 @@
   
   * [반복문 및 조건문](https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170201/fountionIfSwitchForWhile.md)
   
- * [리터럴](https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170208/literal.md)
+  
+  * [리터럴](https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170208/literal.md)
  
- * [JSON](https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170208/JSON.md) 
+  * [JSON](https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170208/JSON.md) 
   
   ------------------
   
-  * [자주 사용하는 메서드 정리][12]
+  
+ * [자주 사용하는 메서드 정리][12]
   [12]: https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170131/todaySummary.md
