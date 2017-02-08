@@ -23,7 +23,7 @@
   
 2.자료구조
 
-
+ * [기초 개념](https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170208/dataStruct.md)
   
 
 Ⅲ.iOS 앱 개발
@@ -48,6 +48,10 @@
   [11]: https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170123/libraryFramwork.md
   
   * [반복문 및 조건문](https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170201/fountionIfSwitchForWhile.md)
+  
+ * [리터럴](https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170208/literal.md)
+ 
+ * [JSON](https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170208/JSON.md) 
   
   ------------------
   
