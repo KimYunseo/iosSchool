@@ -3,6 +3,12 @@
 
  * [윤년에 따른 D-Day 구하기](https://github.com/KimYunseo/iosSchool/tree/master/DailySummarizing/170131/PracticeHard01)
 
+ * [재귀함수를 통한 이진탐색](https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170212/RecursiveBinarySearch.md)
+
+  
+![이진탐색](https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170212/binarySearching.gif)
+
+ 
 
 Ⅱ.프로그래밍 기초
 ============= 
@@ -25,9 +31,8 @@
 
  * [기초 개념](https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170208/dataStruct.md)
   
- * [재귀함수를 통한 이진탐색]()
- 
-![]()
+ * [재귀함수를 통한 이진탐색](https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170212/RecursiveBinarySearch.md)
+
 
 Ⅲ.iOS 앱 개발
 ============

@@ -10,7 +10,7 @@ Recursive Binary Search
 
 * 재귀함수에 익숙해지기 위해 이 알고리즘을 공부하였다.
 
-![이진탐색]()
+![이진탐색](https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170212/binarySearching.gif)
 
 ViewController.m
 
