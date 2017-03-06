@@ -5,7 +5,7 @@
 
  * [재귀함수를 통한 이진탐색](https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170212/RecursiveBinarySearch.md)
 
-  ![이진탐색](https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170212/RecursiveBinarySearch.gif)
+
 
 
  
