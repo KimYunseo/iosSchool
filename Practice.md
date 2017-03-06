@@ -23,6 +23,11 @@ I.알고리즘 연습
 6.특정값까지 존재하는 소수의 개수
 
 
+7.윤년에 따른 D-Day구하기
+
+ * [윤년에 따른 D-Day 구하기](https://github.com/KimYunseo/iosSchool/tree/master/DailySummarizing/170131/PracticeHard01)
+
+
 
 Ⅱ.objective c 연습
 
