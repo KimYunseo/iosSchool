@@ -43,7 +43,7 @@
 }
 
 
-
+//plist를 document에 넣는 것
 - (void)plistSave{
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -60,6 +60,7 @@
 }
 
 
+//document에서 plist를 받아 dictionary로 뿌리는것
 - (NSMutableDictionary *)dicCreat{
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -75,6 +76,7 @@
 }
 
 
+//self dicCreat에서 뿌리는 dictionary를 넣고 키 값이 friend에 해당하는 value를 array로 뿌리는것
 - (NSMutableArray *)friendArray{
     NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
     dic = [self dicCreat];
@@ -86,7 +88,7 @@
 }
 
 
-
+//받아온 dicrionary를 self.dic에 넣는것
 - (void)friendSave:(NSMutableDictionary *)data {
     
     [self.friend addObject:data];
@@ -98,7 +100,7 @@
     [self plistReplace];
 }
 
-
+//document에 있는 plist 파일을 받아오는 메소드 
 - (void)plistReplace{
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);

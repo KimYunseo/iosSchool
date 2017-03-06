@@ -113,14 +113,48 @@
                                 <rect key="frame" x="169" y="358" width="38" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginAction:" destination="Re7-AE-ojZ" eventType="touchUpInside" id="Smc-74-gZu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="idTextField" destination="1Ne-Zh-89z" id="5go-po-uaA"/>
+                        <outlet property="pwTextField" destination="dLy-ZG-FTp" id="yFP-75-WQo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HYJ-sQ-LVQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="706" y="32"/>
+        </scene>
+        <!--Main Page View Controller-->
+        <scene sceneID="mPw-wK-tzR">
+            <objects>
+                <viewController storyboardIdentifier="MainPageViewController" id="FZt-RA-KVF" customClass="MainPageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zNj-fH-Ywz"/>
+                        <viewControllerLayoutGuide type="bottom" id="gFo-mM-f3T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="p7P-3d-MEn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="메인 페이지 ^^" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYv-H8-VTc">
+                                <rect key="frame" x="107" y="234" width="161" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DuG-1c-iqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1380" y="31.934032983508249"/>
         </scene>
     </scenes>
 </document>

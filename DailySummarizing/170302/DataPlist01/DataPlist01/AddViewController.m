@@ -26,7 +26,7 @@
     self.navigationItem.rightBarButtonItem = rightBtn;
     
 }
-
+//rightBtn를 눌렀을 때 행동하는 메소드
 - (void)addplistAction:(UIBarButtonItem *)sender {
     [[DataCenter shareData] friendSave:[self insertFriend:self.nameTF.text setphone:self.phoneNum.text]];
     
@@ -34,6 +34,8 @@
     
 }
 
+
+//이름과 폰번호를 받아 dictionary로 보내는 메소드
 - (NSMutableDictionary *)insertFriend:(NSString *)name
                              setphone:(NSString *)number{
     

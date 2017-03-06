@@ -84,5 +84,27 @@
     // Dispose of any resources that can be recreated.
 }
 
+// 호출시점 확인용 메소드!!
+- (void)viewWillAppear:(BOOL)animated{
+    NSLog(@"viewWillAppear");
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    
+    NSLog(@"viewDidAppear");
+}
+
+-(void)viewWillLayoutSubviews{
+    
+    NSLog(@"viewWillLayoutSubviews");
+    
+}
+
+- (void)viewDidLayoutSubviews{
+    
+    NSLog(@"viewDidLayoutSubviews");
+    
+}
+
 
 @end

@@ -17,6 +17,7 @@
 		44189FC81E6BF99A00CAA32C /* DataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 44189FC71E6BF99A00CAA32C /* DataCenter.m */; };
 		44189FCA1E6BFE4E00CAA32C /* Sample.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44189FC91E6BFE4E00CAA32C /* Sample.plist */; };
 		44189FCD1E6C0F9100CAA32C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44189FCC1E6C0F9100CAA32C /* LoginViewController.m */; };
+		44189FF61E6D42CC00CAA32C /* MainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44189FF51E6D42CC00CAA32C /* MainPageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		44189FC91E6BFE4E00CAA32C /* Sample.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Sample.plist; sourceTree = "<group>"; };
 		44189FCB1E6C0F9100CAA32C /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		44189FCC1E6C0F9100CAA32C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		44189FF41E6D42CC00CAA32C /* MainPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainPageViewController.h; sourceTree = "<group>"; };
+		44189FF51E6D42CC00CAA32C /* MainPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainPageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,8 @@
 				44189FB31E6BF96F00CAA32C /* ViewController.m */,
 				44189FCB1E6C0F9100CAA32C /* LoginViewController.h */,
 				44189FCC1E6C0F9100CAA32C /* LoginViewController.m */,
+				44189FF41E6D42CC00CAA32C /* MainPageViewController.h */,
+				44189FF51E6D42CC00CAA32C /* MainPageViewController.m */,
 				44189FC61E6BF99A00CAA32C /* DataCenter.h */,
 				44189FC71E6BF99A00CAA32C /* DataCenter.m */,
 				44189FB51E6BF96F00CAA32C /* Main.storyboard */,
@@ -171,6 +176,7 @@
 				44189FC81E6BF99A00CAA32C /* DataCenter.m in Sources */,
 				44189FCD1E6C0F9100CAA32C /* LoginViewController.m in Sources */,
 				44189FBA1E6BF96F00CAA32C /* PlistPractice.xcdatamodeld in Sources */,
+				44189FF61E6D42CC00CAA32C /* MainPageViewController.m in Sources */,
 				44189FB11E6BF96F00CAA32C /* AppDelegate.m in Sources */,
 				44189FAE1E6BF96F00CAA32C /* main.m in Sources */,
 			);
@@ -327,6 +333,7 @@
 				44189FC51E6BF96F00CAA32C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

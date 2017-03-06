@@ -125,27 +125,27 @@
         [cell  profileImageSetting:@"mina.png" setMainImg:@"namibia.jpg"];
     }
     
-    NSLog(@"%@",[[self.data objectAtIndex:indexPath.row] valueForKey:@"name"]);
-    NSLog(@"%@",[[self.data objectAtIndex:indexPath.row] valueForKey:@"nation"]);
-               
-//    [cell textInsertSetName:[self.name objectAtIndex:indexPath.row]
-//                  setNation:[self.nation objectAtIndex:indexPath.row]
-//                   setTitle:[self.title1 objectAtIndex:indexPath.row]
-//                    setYear:[self.year objectAtIndex:indexPath.row]
-//                   setMonth:[self.month objectAtIndex:indexPath.row]
-//               setTotalDays:[self.days objectAtIndex:indexPath.row]
-//               setKilometer:[self.kilometer objectAtIndex:indexPath.row]
-//                   setSteps:[self.steps objectAtIndex:indexPath.row]
-//                 setExplain:[self.explain objectAtIndex:indexPath.row]];
-    [cell textInsertSetName:[[self.data objectAtIndex:indexPath.row] valueForKey:@"name"]
-                  setNation:[[self.data objectAtIndex:indexPath.row] valueForKey:@"nation"]
-                   setTitle:[[self.data objectAtIndex:indexPath.row] valueForKey:@"title"]
-                    setYear:[[self.data objectAtIndex:indexPath.row] valueForKey:@"year"]
-                   setMonth:[[self.data objectAtIndex:indexPath.row] valueForKey:@"month"]
-               setTotalDays:[[self.data objectAtIndex:indexPath.row] valueForKey:@"days"]
-               setKilometer:[[self.data objectAtIndex:indexPath.row] valueForKey:@"kilometer"]
-                   setSteps:[[self.data objectAtIndex:indexPath.row] valueForKey:@"steps"]
-                 setExplain:[[self.data objectAtIndex:indexPath.row] valueForKey:@"explain"]];
+//    NSLog(@"%@",[[self.data objectAtIndex:indexPath.row] valueForKey:@"name"]);
+//    NSLog(@"%@",[[self.data objectAtIndex:indexPath.row] valueForKey:@"nation"]);
+//               
+    [cell textInsertSetName:[self.name objectAtIndex:indexPath.row]
+                  setNation:[self.nation objectAtIndex:indexPath.row]
+                   setTitle:[self.title1 objectAtIndex:indexPath.row]
+                    setYear:[self.year objectAtIndex:indexPath.row]
+                   setMonth:[self.month objectAtIndex:indexPath.row]
+               setTotalDays:[self.days objectAtIndex:indexPath.row]
+               setKilometer:[self.kilometer objectAtIndex:indexPath.row]
+                   setSteps:[self.steps objectAtIndex:indexPath.row]
+                 setExplain:[self.explain objectAtIndex:indexPath.row]];
+//    [cell textInsertSetName:[[self.data objectAtIndex:indexPath.row] valueForKey:@"name"]
+//                  setNation:[[self.data objectAtIndex:indexPath.row] valueForKey:@"nation"]
+//                   setTitle:[[self.data objectAtIndex:indexPath.row] valueForKey:@"title"]
+//                    setYear:[[self.data objectAtIndex:indexPath.row] valueForKey:@"year"]
+//                   setMonth:[[self.data objectAtIndex:indexPath.row] valueForKey:@"month"]
+//               setTotalDays:[[self.data objectAtIndex:indexPath.row] valueForKey:@"days"]
+//               setKilometer:[[self.data objectAtIndex:indexPath.row] valueForKey:@"kilometer"]
+//                   setSteps:[[self.data objectAtIndex:indexPath.row] valueForKey:@"steps"]
+//                 setExplain:[[self.data objectAtIndex:indexPath.row] valueForKey:@"explain"]];
 
     
     return cell;

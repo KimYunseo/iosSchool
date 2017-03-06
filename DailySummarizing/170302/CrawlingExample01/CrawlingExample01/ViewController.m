@@ -25,10 +25,10 @@
 - (void)getSiteHtml
 {
     NSURLSession *session = NSURLSession.sharedSession;
-    NSURLSessionDataTask *dataTask = [session dataTaskWithURL:[NSURL URLWithString:@"https://www.stackoverflow.com"]
+    NSURLSessionDataTask *dataTask = [session dataTaskWithURL:[NSURL URLWithString:@"https://naver.com"]
                                             completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-                                                NSString *htmlString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                                                NSLog(@"http string: %@", htmlString);
+//                                                NSData *htmlString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                                                NSLog(@"http string: %@", data);
                                             }];
     [dataTask resume];
 }

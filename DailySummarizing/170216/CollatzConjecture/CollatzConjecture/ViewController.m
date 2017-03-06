@@ -9,6 +9,9 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+<UITextFieldDelegate, UITextViewDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *inputTextField;
+@property (weak, nonatomic) IBOutlet UITextView *resultTextView;
 
 @end
 
@@ -24,12 +27,32 @@
     
     // 앞의 두 과정을 최종결과가 1이 될때 까지 반복
     
-//    NSLog(@"%ld",[self collatzArray:@"704623"]);
-    NSLog(@"%ld",[self collatzCount:@"3"]);
+//    NSLog(@"%ld",[self collatzArray:@"3"]);
+//    NSLog(@"%ld",[self collatzCount:@"3"]);
+    self.inputTextField.delegate = self;
     
 }
 
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    
+    if ([self.inputTextField.text integerValue] >= 1) {
+        NSInteger num = [self collatzCount:self.inputTextField.text];
+        
+        
+        NSString *temp = [NSString stringWithFormat:@"총 %ld 번을 반복한다.", num];
+        
+        self.resultTextView.text = temp;
+    } else {
+        
+        self.resultTextView.text = @"0이 아닌 양수 값을 입력하세요.";
+        
+    }
+    [self.inputTextField resignFirstResponder];
+    return YES;
+}
+
+//array를 사용한 방법
 - (NSInteger)collatzArray:(NSString *)number
 {
     NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -54,6 +77,7 @@
     else return -1;
 }
 
+//array를 사용하지 않고 하는 방법
 - (NSInteger)collatzCount:(NSString *)number
 {
     NSInteger num = [number integerValue];

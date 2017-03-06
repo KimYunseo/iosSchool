@@ -27,6 +27,7 @@
     return data;
 }
 
+
 - (instancetype)init
 {
     self = [super init];
@@ -36,12 +37,14 @@
     return self;
 }
 
+//point를 최초 0으로 만들어 준다.
 - (void)pointInit{
     
     self.point = @"0";
     
 }
 
+// 받은 포인트 값을 self.point에 넣는다.
 - (void)pointSave:(NSString *)point{
  
     self.point = point;

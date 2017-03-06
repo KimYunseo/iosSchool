@@ -24,21 +24,25 @@
 }
 */
 
+/*
+ 스토리보드는 initWithCoder를 이용하여 초기화 한다.
+*/
 -(instancetype)initWithCoder:(NSCoder *)aDecoder {
     
     self = [super initWithCoder:aDecoder];
     
-    NSLog(@"test");
+    NSLog(@"layout subviews 보다 먼저 호출");
     
-    
-//    [self mainImgRandom];
     return self;
 }
+
 
 - (void)hoho{
     NSLog(@"dsfa");
 }
 
+
+//hp버튼을 눌렀을 때 행동하는 메소드
 - (IBAction)hpValuePlus:(id)sender{
     
     NSInteger point = [[DataCenter shareData].point integerValue];
@@ -59,6 +63,7 @@
 }
 
 
+//메인 imageView에 사진을 랜덤으로 넣기 위한 메소드
 - (void)mainImgRandom{
     NSLog(@"image");
     
@@ -70,6 +75,7 @@
     self.mainImg.image = [UIImage imageNamed:imageName[number]];
 }
 
+//str 버튼을 눌렀을 때 행동하는 메소드
 - (IBAction)strValuePlus:(id)sender{
     
     NSInteger point = [[DataCenter shareData].point integerValue];
@@ -92,9 +98,11 @@
 
 - (void)layoutSubviews{
     
-    [self mainImgRandom];
+    NSLog(@"initWithCoder 보다 늦게 호출");
+//    [self mainImgRandom];
 }
 
+//def 버튼을 눌렀을 행동하는 메소드
 - (IBAction)defValuePlus:(id)sender{
     
     NSInteger point = [[DataCenter shareData].point integerValue];
@@ -115,7 +123,12 @@
     
 }
 
-
-
+//story board는 awakeFromNib메소드를 호출하며 initailize한다. 따라서 해당 imageView에 이미지를 삽입하는 시기는 이때가 적절하다고 판단한다.
+//http://szulctomasz.com/2015/08/21/ios-initialization-process-of-a-view-loaded-from-a-storyboard.html 참고
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    [self mainImgRandom];
+    
+}
 
 @end

@@ -79,7 +79,7 @@
 - (void)frameSetting{
     CGFloat offsetWidth = self.frame.size.width;
     CGFloat offsetHeight = self.frame.size.height;
-    CGFloat offsetX = offsetWidth/5;`
+    CGFloat offsetX = offsetWidth/5;
     CGFloat offsetY = offsetHeight/12;
     
     self.titleView.frame = CGRectMake(offsetX, offsetY*2, offsetX*3, offsetY);
