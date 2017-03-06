@@ -22,10 +22,10 @@
     for(a=0 ; a <= num; a++) p[a]=0;
     for(b =2 ; b<=num ; b++ ){
         if(p[b]==0){
-            NSLog(@"%ld ", (long)b);
+//            NSLog(@"%ld ", (long)b);
             
             for( a=b ; a<=num ; a = a*2 ) p[a]=1;
-            
+            NSLog(@"ha %ld", a);
         }
         
     }

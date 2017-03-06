@@ -1,0 +1,34 @@
+//
+//  NextTableViewCell.m
+//  StroyboardPractice01
+//
+//  Created by abyssinaong on 2017. 2. 27..
+//  Copyright © 2017년 KimYunseo. All rights reserved.
+//
+
+#import "NextTableViewCell.h"
+@interface NextTableViewCell()
+
+@property (nonatomic,weak) IBOutlet UIImageView *imgView;
+
+@property (nonatomic, weak) IBOutlet UILabel *labelTT;
+
+@end
+
+@implementation NextTableViewCell
+
+
+
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    // Initialization code
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+
+    // Configure the view for the selected state
+}
+
+@end

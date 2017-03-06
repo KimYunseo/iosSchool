@@ -28,6 +28,8 @@ int main(int argc, const char * argv[]) {
             if(num[a] == 0){
             printf("%d ", a);
             for(b = 2*a ; b<=pM; b +=a) num[b] = 1;
+                
+                
             }
         }
         

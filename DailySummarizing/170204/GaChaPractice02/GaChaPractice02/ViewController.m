@@ -10,6 +10,7 @@
 
 @interface ViewController ()
 
+
 @end
 
 @implementation ViewController
@@ -82,7 +83,8 @@
     CGFloat imgWidth = subMain01.frame.size.width/4;
     CGFloat imgHeight = subMain01.frame.size.height;
     UIImageView *subImage01 = [ToolClass createImageView:imgName[0] setX:0 setWidth:imgWidth setHeight:imgHeight];
-   
+    
+    
     UIButton *sub01HP = [ToolClass createButtonSetxNum:imgWidth+5 yNum:imgHeight/4];
     UILabel *sub01HPText = [ToolClass createLabelSetX:imgWidth+20 setY:imgHeight/4 selcMode:1];
     self.sub01HPNum = [ToolClass createLabelSetX:imgWidth+45 setY:imgHeight/4 selcMode:2];
@@ -111,6 +113,8 @@
     frame = CGRectMake(0, yNum, widthMain, heighrMain);
     UIView *subMain02 =[ToolClass subMainCreate];
     UIImageView *subImage02 = [ToolClass createImageView:imgName[1] setX:0 setWidth:imgWidth setHeight:imgHeight];
+    
+    
 //    UIImageView *subImage06 = [ToolClass createImageView:imgName[5] setX:imgWidth*2 setWidth:imgWidth setHeight:imgHeight];
     subMain02.frame = frame;
     UIButton *sub02HP = [ToolClass createButtonSetxNum:imgWidth+5 yNum:imgHeight/4];
@@ -139,6 +143,8 @@
     frame = CGRectMake(0, yNum, widthMain, heighrMain);
     UIView *subMain03 =[ToolClass subMainCreate];
     UIImageView *subImage03 = [ToolClass createImageView:imgName[2] setX:0 setWidth:imgWidth setHeight:imgHeight];
+    
+    
 //    UIImageView *subImage07 = [ToolClass createImageView:imgName[6] setX:imgWidth*2 setWidth:imgWidth setHeight:imgHeight];
     subMain03.frame = frame;
     UIButton *sub03HP = [ToolClass createButtonSetxNum:imgWidth+5 yNum:imgHeight/4];
@@ -168,6 +174,8 @@
     UIView *subMain04 =[ToolClass subMainCreate];
     subMain04.frame = frame;
     UIImageView *subImage04 = [ToolClass createImageView:imgName[3] setX:0 setWidth:imgWidth setHeight:imgHeight];
+    
+    
 //    UIImageView *subImage08 = [ToolClass createImageView:imgName[7] setX:imgWidth*2 setWidth:imgWidth setHeight:imgHeight];
     
     UIButton *sub04HP = [ToolClass createButtonSetxNum:imgWidth+5 yNum:imgHeight/4];
