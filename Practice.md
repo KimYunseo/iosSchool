@@ -1,8 +1,6 @@
 I.알고리즘 연습
 
-1.재귀함수를 통한 이진탐색
-
-[재귀함수를 통한 이진탐색](https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170212/RecursiveBinarySearch.md)
+1.[재귀함수를 통한 이진탐색](https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170212/RecursiveBinarySearch.md)
 
 ![이진탐색](https://github.com/KimYunseo/iosSchool/raw/master/DailySummarizing/170212/RecursiveBinarySearch.gif)
 
@@ -23,10 +21,7 @@ I.알고리즘 연습
 6.특정값까지 존재하는 소수의 개수
 
 
-7.윤년에 따른 D-Day구하기
-
- * [윤년에 따른 D-Day 구하기](https://github.com/KimYunseo/iosSchool/tree/master/DailySummarizing/170131/PracticeHard01)
-
+7.[윤년에 따른 D-Day 구하기](https://github.com/KimYunseo/iosSchool/tree/master/DailySummarizing/170131/PracticeHard01)
 
 
 Ⅱ.objective c 연습

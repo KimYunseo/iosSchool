@@ -6,9 +6,9 @@
 
 2.해커톤
 
-3.알고리즘 연습 및 주요 실습 모음
+3.[알고리즘 연습 및 주요 실습 모음](https://github.com/KimYunseo/iosSchool/blob/master/Practice.md)
  
- [알고리즘 연습 및 주요 실습 모음](https://github.com/KimYunseo/iosSchool/blob/master/Practice.md)
+ 
 
 Ⅱ.프로그래밍 기초
 ============= 
