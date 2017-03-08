@@ -11,6 +11,7 @@
 #import "DataCenter.h"
 
 @interface LoginViewController ()
+<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *idTextField;
 @property (weak, nonatomic) IBOutlet UITextField *pwTextField;
 
@@ -21,6 +22,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.idTextField.delegate = self;
+    self.pwTextField.delegate = self;
+    
+    
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
+    [tap setAccessibilityFrame:CGRectMake(self.view.frame.size.width, 0, 50, self.view.frame.size.height)];
+    [self.view addGestureRecognizer:tap];
+}
+
+- (void)tapAction:(UITapGestureRecognizer *)sender{
+    
+    [UIView animateWithDuration:0.2 animations:^{
+        self.view.frame = CGRectMake(<#CGFloat x#>, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>);
+    }];
+    
 }
 
 //로그인 버튼을 눌러주면 아이디와 패스워드를 확인해 주는 버튼 액션
@@ -39,9 +56,13 @@
         [self presentViewController:alert animated:YES completion:nil];
         
     }
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
     
+    [textField resignFirstResponder];
     
-    
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning {

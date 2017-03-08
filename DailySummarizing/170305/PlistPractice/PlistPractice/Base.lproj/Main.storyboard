@@ -59,13 +59,23 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="EzR-Aq-79G" appends="YES" id="Jzj-De-JzK"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="idTextField" destination="d3c-ks-rKM" id="8Dl-c0-ALw"/>
                         <outlet property="pwTextField" destination="TlC-sf-63u" id="7fC-FI-Azt"/>
+                        <outlet property="swipLogin" destination="EzR-Aq-79G" id="xEC-16-u1m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="EzR-Aq-79G">
+                    <connections>
+                        <action selector="swipAction:" destination="BYZ-38-t0r" id="Nlg-lH-cc2"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="34.632683658170919"/>
         </scene>

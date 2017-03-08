@@ -18,6 +18,7 @@ typedef NS_ENUM(NSInteger, TextFieldIdentifier)
 
 @interface ViewController ()
 <UITextFieldDelegate>
+@property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *swipLogin;
 @property (weak, nonatomic) IBOutlet UITextField *idTextField;
 @property (weak, nonatomic) IBOutlet UITextField *pwTextField;
 @property (weak, nonatomic) LoginViewController *loginVC;
@@ -98,6 +99,13 @@ typedef NS_ENUM(NSInteger, TextFieldIdentifier)
         
     }
    
+    
+}
+- (IBAction)swipAction:(id)sender {
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        self.loginVC.view.frame = CGRectMake(-50, 0, self.view.frame.size.width, self.view.frame.size.height);
+    }];
     
 }
 
