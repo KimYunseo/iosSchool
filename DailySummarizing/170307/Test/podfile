@@ -1,0 +1,9 @@
+source 'https://github.com/fmscode/DrawView.git'
+
+platform :ios, '7.0'
+
+target “Test” do
+
+    pod "DrawView"
+
+end

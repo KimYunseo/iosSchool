@@ -27,18 +27,18 @@
     
     
     
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
-    [tap setAccessibilityFrame:CGRectMake(self.view.frame.size.width, 0, 50, self.view.frame.size.height)];
-    [self.view addGestureRecognizer:tap];
+//    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
+//    [tap setAccessibilityFrame:CGRectMake(self.view.frame.size.width, 0, 50, self.view.frame.size.height)];
+//    [self.view addGestureRecognizer:tap];
 }
 
-- (void)tapAction:(UITapGestureRecognizer *)sender{
-    
-    [UIView animateWithDuration:0.2 animations:^{
-        self.view.frame = CGRectMake(<#CGFloat x#>, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>);
-    }];
-    
-}
+//- (void)tapAction:(UITapGestureRecognizer *)sender{
+//    
+////    [UIView animateWithDuration:0.2 animations:^{
+////        self.view.frame = CGRectMake(<#CGFloat x#>, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>);
+////    }];
+//    
+//}
 
 //로그인 버튼을 눌러주면 아이디와 패스워드를 확인해 주는 버튼 액션
 - (IBAction)loginAction:(id)sender {
