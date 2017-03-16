@@ -53,17 +53,18 @@
     NSURL *imageUrl = [NSURL URLWithString:imgUrl];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     NSURLSessionTask *task = [session dataTaskWithURL:imageUrl completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-//        dispatch_async(dispatch_get_main_queue(), ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
             if (data) {
                 UIImage *image = [UIImage imageWithData:data];
 //                NSLog(@"collectionViewGetImage task %@", image);
-                [self.imageArray addObject:image];
+                [self.imageArray addObject:data];
+                
                 NSLog(@"collectionViewGetImage task %@", self.imageArray);
             } else {
                 UIImage *image = [UIImage imageNamed:@"free.jpg"];
-                [self.imageArray addObject:image];
+                [self.imageArray addObject:data];
             } 
-//        });
+        });
         
         
     }];
