@@ -7,6 +7,7 @@
 //
 
 #import "ProfileViewController.h"
+#import "DataCenter.h"
 
 @interface ProfileViewController ()
 <UITextFieldDelegate>
@@ -24,6 +25,17 @@
     self.eMail.delegate =self;
 }
 
+- (IBAction)logoutAction:(id)sender {
+    
+    [[DataCenter shareData] logoutSetCompletion:^(BOOL isSuccess) {
+        if(!isSuccess) {
+            
+            NSLog(@"로그아웃이 되었습니다.!!!!!!!!!!!!!!!!!!!!!!");
+            
+        }
+    }];
+    
+}
 
 
 

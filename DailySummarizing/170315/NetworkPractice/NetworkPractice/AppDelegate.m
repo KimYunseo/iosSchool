@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "DataCenter.h"
+#import "LoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,6 +21,7 @@
     // Override point for customization after application launch.
     [DataCenter shareData];
     
+
     return YES;
 }
 
@@ -48,6 +50,8 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+//    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"Authorization"];
+    
 }
 
 

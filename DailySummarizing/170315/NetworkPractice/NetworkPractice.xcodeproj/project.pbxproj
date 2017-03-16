@@ -21,6 +21,9 @@
 		44180C5B1E7966A000742AAC /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44180C5A1E7966A000742AAC /* ProfileViewController.m */; };
 		44180C5E1E796E8600742AAC /* DataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 44180C5D1E796E8600742AAC /* DataCenter.m */; };
 		44180C601E7971E300742AAC /* free.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44180C5F1E7971E300742AAC /* free.jpg */; };
+		44180C631E7A50A400742AAC /* SignupViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44180C621E7A50A400742AAC /* SignupViewViewController.m */; };
+		44180C661E7A51FB00742AAC /* NetworkModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 44180C651E7A51FB00742AAC /* NetworkModule.m */; };
+		44180C691E7A5F7C00742AAC /* BranchNaviVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 44180C681E7A5F7C00742AAC /* BranchNaviVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +50,12 @@
 		44180C5C1E796E8600742AAC /* DataCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataCenter.h; sourceTree = "<group>"; };
 		44180C5D1E796E8600742AAC /* DataCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataCenter.m; sourceTree = "<group>"; };
 		44180C5F1E7971E300742AAC /* free.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = free.jpg; sourceTree = "<group>"; };
+		44180C611E7A50A400742AAC /* SignupViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupViewViewController.h; sourceTree = "<group>"; };
+		44180C621E7A50A400742AAC /* SignupViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewViewController.m; sourceTree = "<group>"; };
+		44180C641E7A51FB00742AAC /* NetworkModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkModule.h; sourceTree = "<group>"; };
+		44180C651E7A51FB00742AAC /* NetworkModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkModule.m; sourceTree = "<group>"; };
+		44180C671E7A5F7C00742AAC /* BranchNaviVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BranchNaviVC.h; sourceTree = "<group>"; };
+		44180C681E7A5F7C00742AAC /* BranchNaviVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BranchNaviVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +90,8 @@
 			children = (
 				44180C5C1E796E8600742AAC /* DataCenter.h */,
 				44180C5D1E796E8600742AAC /* DataCenter.m */,
+				44180C641E7A51FB00742AAC /* NetworkModule.h */,
+				44180C651E7A51FB00742AAC /* NetworkModule.m */,
 				44180C351E794A4500742AAC /* AppDelegate.h */,
 				44180C361E794A4500742AAC /* AppDelegate.m */,
 				44180C381E794A4500742AAC /* ViewController.h */,
@@ -92,8 +103,12 @@
 				44180C531E794EB300742AAC /* MainCollectionViewCell.xib */,
 				44180C561E7956E600742AAC /* LoginViewController.h */,
 				44180C571E7956E600742AAC /* LoginViewController.m */,
+				44180C611E7A50A400742AAC /* SignupViewViewController.h */,
+				44180C621E7A50A400742AAC /* SignupViewViewController.m */,
 				44180C591E7966A000742AAC /* ProfileViewController.h */,
 				44180C5A1E7966A000742AAC /* ProfileViewController.m */,
+				44180C671E7A5F7C00742AAC /* BranchNaviVC.h */,
+				44180C681E7A5F7C00742AAC /* BranchNaviVC.m */,
 				44180C5F1E7971E300742AAC /* free.jpg */,
 				44180C491E794AFC00742AAC /* Login.storyboard */,
 				44180C3B1E794A4500742AAC /* Main.storyboard */,
@@ -191,10 +206,13 @@
 				44180C371E794A4500742AAC /* AppDelegate.m in Sources */,
 				44180C5E1E796E8600742AAC /* DataCenter.m in Sources */,
 				44180C581E7956E600742AAC /* LoginViewController.m in Sources */,
+				44180C631E7A50A400742AAC /* SignupViewViewController.m in Sources */,
 				44180C541E794EB300742AAC /* MainCollectionViewCell.m in Sources */,
+				44180C661E7A51FB00742AAC /* NetworkModule.m in Sources */,
 				44180C5B1E7966A000742AAC /* ProfileViewController.m in Sources */,
 				44180C341E794A4500742AAC /* main.m in Sources */,
 				44180C4D1E794DE500742AAC /* MainCollectionVC.m in Sources */,
+				44180C691E7A5F7C00742AAC /* BranchNaviVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +367,7 @@
 				44180C481E794A4500742AAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,10 +8,16 @@
 
 #import "DataCenter.h"
 
+
 @interface DataCenter()
+
 @property NSMutableArray *imgUrlArray;
 @property NSMutableArray *imageArray;
 @property NSMutableArray *imageSizeArray;
+@property NSArray *tempArray;
+@property NSMutableArray *widthArray;
+@property NSMutableArray *heightArray;
+@property NetworkModule *network;
 
 @end
 
@@ -22,6 +28,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         data = [[DataCenter alloc] init];
+        
     });
     
     return data;
@@ -32,8 +39,13 @@
 {
     self = [super init];
     if (self) {
-        [self exampleIMG];
-        [self createImgData];
+        self.network = [[NetworkModule alloc] init];
+        self.imageArray = [[NSMutableArray alloc] init];
+        self.imgUrlArray = [[NSMutableArray alloc] init];
+        self.imageSizeArray = [[NSMutableArray alloc] init];
+        self.widthArray = [[NSMutableArray alloc] init];
+        self.heightArray = [[NSMutableArray alloc] init];
+        [self exampleIMG];        
     }
     return self;
 }
@@ -46,7 +58,7 @@
     self.imgUrlArray = [imgArray mutableCopy];
     
     NSLog(@"exampleIMG");
-    
+    [self createImgData];
 }
 
 - (void)collectionViewGetImage:(NSString *)imgUrl {
@@ -56,17 +68,18 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             if (data) {
                 UIImage *image = [UIImage imageWithData:data];
-//                NSLog(@"collectionViewGetImage task %@", image);
-                [self.imageArray addObject:data];
+
+                [self.imageArray addObject:image];
+                NSString *width = [NSString stringWithFormat:@"%lf", image.size.width];
+                [self.widthArray addObject:width];
+                NSString *height = [NSString stringWithFormat:@"%lf", image.size.height];
+                [self.heightArray addObject:height];
                 
                 NSLog(@"collectionViewGetImage task %@", self.imageArray);
-            } else {
-                UIImage *image = [UIImage imageNamed:@"free.jpg"];
-                [self.imageArray addObject:data];
-            } 
+            }
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"imageDown" object:@""];
+            NSLog(@"노티 보냈다");
         });
-        
-        
     }];
     
     [task resume];
@@ -80,24 +93,31 @@
     for (NSInteger i = 0; i < self.imgUrlArray.count; i++) {
         [self collectionViewGetImage:self.imgUrlArray[i]];
     }
-    
-    [self collectionViewGetImageSize];
-    NSLog(@"createImgData");
+
 }
 
-- (void)collectionViewGetImageSize{
-    
-    if (self.imageArray.count > 0) {
-        for (NSInteger i = 0; i < self.imageArray.count; i++) {
-            UIImage *image = self.imageArray[i];
-            //        CGSize imgSize = CGSizeMake(image.size.width, image.size.height);
-            
-            NSDictionary *dic = @{@"width":[NSNumber numberWithFloat:image.size.width], @"height":[NSNumber numberWithFloat:image.size.height]};
-            [self.imageSizeArray addObject:dic];
-        }
-    }
-    NSLog(@"collectionViewGetImageSize");
+
+
+- (void)loginSetName:(NSString *)username
+         setPassword:(NSString *)password loginCompletion:(void(^)(BOOL isSuccess))completion
+{
+    [self.network loginSessionInsertUsername:username insertPassword:password loginCompletion:completion];
 }
 
+
+- (void)logoutSetCompletion:(void(^)(BOOL isSuccess))completion{
+    
+    [self.network logoutSessionSetCompletion:completion];
+    
+}
+
+- (void)signupSessionInsertUsername:(NSString *)username
+                    insertPassword1:(NSString *)password1
+                     isertPassword2:(NSString *)password2
+                    loginCompletion:(void(^)(BOOL isSuccess))completion{
+    
+    [self.network signupSessionInsertUsername:username insertPassword1:password1 isertPassword2:password2 loginCompletion:completion];
+    
+}
 
 @end

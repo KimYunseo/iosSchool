@@ -14,7 +14,9 @@
         <!--LoginViewController-->
         <scene sceneID="Ixq-v9-hil">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Login" storyboardName="Login" referencedIdentifier="LoginViewController" id="ebh-Zw-uQV" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="Login" storyboardName="Login" referencedIdentifier="LoginViewController" id="ebh-Zw-uQV" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="0O0-za-jeR"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pv8-o2-SD4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1764" y="232"/>
@@ -27,12 +29,12 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XGO-6Z-gxi">
-                                <rect key="frame" x="10" y="0.0" width="355" height="603"/>
+                                <rect key="frame" x="10" y="0.0" width="355" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JBS-Kv-UFB">
                                     <size key="itemSize" width="50" height="50"/>
@@ -192,7 +194,10 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MdO-J1-6I7">
                                                         <rect key="frame" x="0.0" y="15" width="100" height="30"/>
-                                                        <state key="normal" title="Button"/>
+                                                        <state key="normal" title="Logout"/>
+                                                        <connections>
+                                                            <action selector="logoutAction:" destination="iI8-Tg-jrT" eventType="touchUpInside" id="jC9-Rg-Ps2"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSE-bL-uLy">
                                                         <rect key="frame" x="200" y="15" width="100" height="30"/>
@@ -251,7 +256,7 @@
         <!--Item-->
         <scene sceneID="9OL-M7-IHs">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="F1K-hF-TZo" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="BranchNaviVC" automaticallyAdjustsScrollViewInsets="NO" id="F1K-hF-TZo" customClass="BranchNaviVC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Wu1-hc-zn4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jBb-He-ncx">
@@ -261,7 +266,7 @@
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="uTq-gb-tZc"/>
-                        <segue destination="ebh-Zw-uQV" kind="presentation" id="Gk7-bb-aok"/>
+                        <segue destination="ebh-Zw-uQV" kind="presentation" identifier="LoginSegue" id="Gk7-bb-aok"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PdR-qI-RP3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -274,6 +279,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="aRl-ca-k4C" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="wyR-bj-7bm">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
