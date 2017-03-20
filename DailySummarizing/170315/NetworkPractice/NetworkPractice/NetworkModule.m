@@ -164,7 +164,7 @@ Yun seo
     NSURLSessionUploadTask *postDataTask = [session uploadTaskWithRequest:request fromData:nil completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error == nil) {
             NSHTTPURLResponse *httpRespose = (NSHTTPURLResponse *) response;
-            if ((NSInteger)[httpRespose statusCode] == 200) {
+            if ((NSInteger)[httpRespose statusCode] == 201) {
                 NSDictionary *responseDic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
                 NSString *token = [responseDic objectForKey:@"key"];
                 NSLog(@"토큰 값이 들어 온다. %@", token);

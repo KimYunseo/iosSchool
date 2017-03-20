@@ -8,7 +8,7 @@
 
 3.[알고리즘 연습 및 주요 실습 모음](https://github.com/KimYunseo/iosSchool/blob/master/Practice.md)
  
- 
+[임시 네트워크 실습]() 
 
 Ⅱ.프로그래밍 기초
 ============= 
