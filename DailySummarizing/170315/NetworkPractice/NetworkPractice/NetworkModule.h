@@ -7,31 +7,31 @@
 //
 
 #import <Foundation/Foundation.h>
-static NSString * const basicAPI = @"https://fc-ios.lhy.kr/api";
-static NSString * const signUPAdress = @"/member/signup/";
-static NSString * const loginAdress = @"/member/login/";
-static NSString * const logoutAddress = @"/member/logout/";
 
-typedef BOOL (^saveLogin) (void);
+static NSString * const BASIC_API = @"https://fc-ios.lhy.kr/api";
+static NSString * const SIGNUP_ADDRESS = @"/member/signup/";
+static NSString * const LOGIN_ADDRESS = @"/member/login/";
+static NSString * const LOGOUT_ADDRESS = @"/member/logout/";
+static NSString * const POST_ADDRESS = @"/post/";
+
 @interface NetworkModule : NSObject
-@property BOOL loginAccept;
-@property saveLogin loginBlock;
 
-//- (saveLogin)loginSessionInsertUsername:(NSString *)username
-//                    insertPassword:(NSString *)password;
+- (void)networkModuleLoginInsertUsername:(NSString *)username
+                          insertPassword:(NSString *)password
+                         loginCompletion:(void(^)(BOOL, NSInteger))completion;
 
-//- (saveLogin)loginSessionInsertUsername:(NSString *)username
-//                         insertPassword:(NSString *)password loginCompletion:(BOOL(^)(BOOL))completion;
+- (void)networkModuleLogoutSetCompletion:(void(^)(BOOL))completion;
 
-- (void)loginSessionInsertUsername:(NSString *)username
-                         insertPassword:(NSString *)password loginCompletion:(void(^)(BOOL))completion;
+- (void)networkModuleSignupInsertUsername:(NSString *)username
+                          insertPassword1:(NSString *)password1
+                           isertPassword2:(NSString *)password2
+                          loginCompletion:(void(^)(BOOL))completion;
+- (void)networkModuleMultipartfromPostCreat:(NSString *)title
+                                 setContent:(NSString *)content
+                                   setImage:(NSData *)imageData
+                           mulitiComplition:(void(^)(BOOL))completion;
 
 
-
-- (void)logoutSessionSetCompletion:(void(^)(BOOL))completion;
-
-- (void)signupSessionInsertUsername:(NSString *)username
-                    insertPassword1:(NSString *)password1
-                     isertPassword2:(NSString *)password2
-                    loginCompletion:(void(^)(BOOL))completion;
+- (void)networkModulePostListSetPage:(NSString *)page
+                      dataComplition:(void (^)(id array, BOOL isDone))complition;
 @end

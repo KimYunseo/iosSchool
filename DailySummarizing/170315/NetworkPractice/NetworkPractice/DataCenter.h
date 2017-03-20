@@ -9,35 +9,28 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "NetworkModule.h"
+#import "PostData.h"
 
 @interface DataCenter : NSObject
-@property (readonly) NSMutableArray *imgUrlArray;
-@property (readonly) NSMutableArray *imageArray;
-@property (readonly) NSMutableArray *imageSizeArray;
-@property (readonly) NSMutableArray *widthArray;
-@property (readonly) NSMutableArray *heightArray;
-@property BOOL loginAccept;
+
+@property NSMutableArray *postData;
 
 + (instancetype)shareData;
-- (void)collectionViewGetImage:(NSString *)imgUrl;
-//- (void)collectionViewGetImageSize;
 
-//- (void)loginSetName:(NSString *)username
-//         setPassword:(NSString *)password
-//             setBloc:(saveLogin)log;
+- (void)dataCenterLoginSetName:(NSString *)username
+                   setPassword:(NSString *)password loginCompletion:(void(^)(BOOL isSuccess, NSInteger errorCode))completion;
 
-//- (void)loginSetName:(NSString *)username
-//         setPassword:(NSString *)password loginCompletion:(BOOL(^)(BOOL))completion;
-
-- (void)loginSetName:(NSString *)username
-         setPassword:(NSString *)password loginCompletion:(void(^)(BOOL isSuccess))completion;
-
-- (void)logoutSetCompletion:(void(^)(BOOL isSuccess))completion;
+- (void)dataCenterLogoutSetCompletion:(void(^)(BOOL isSuccess))completion;
 
 
-- (void)signupSessionInsertUsername:(NSString *)username
-                    insertPassword1:(NSString *)password1
-                     isertPassword2:(NSString *)password2
-                    loginCompletion:(void(^)(BOOL isSuccess))completion;
+- (void)dataCenterSignupInsertUsername:(NSString *)username
+                       insertPassword1:(NSString *)password1
+                        isertPassword2:(NSString *)password2
+                       loginCompletion:(void(^)(BOOL isSuccess))completion;
 
+- (void)dataCenterMultipartInsert:(NSString *)title
+                    insertContent:(NSString *)content
+                      insertImage:(UIImage *)image
+                  multiComplition:(void(^)(BOOL isSuccess))complition;
+- (void)dataCenterSetContent;
 @end

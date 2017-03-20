@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		44180C341E794A4500742AAC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44180C331E794A4500742AAC /* main.m */; };
 		44180C371E794A4500742AAC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 44180C361E794A4500742AAC /* AppDelegate.m */; };
-		44180C3A1E794A4500742AAC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44180C391E794A4500742AAC /* ViewController.m */; };
 		44180C3D1E794A4500742AAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44180C3B1E794A4500742AAC /* Main.storyboard */; };
 		44180C3F1E794A4500742AAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44180C3E1E794A4500742AAC /* Assets.xcassets */; };
 		44180C421E794A4500742AAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44180C401E794A4500742AAC /* LaunchScreen.storyboard */; };
@@ -24,6 +23,10 @@
 		44180C631E7A50A400742AAC /* SignupViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44180C621E7A50A400742AAC /* SignupViewViewController.m */; };
 		44180C661E7A51FB00742AAC /* NetworkModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 44180C651E7A51FB00742AAC /* NetworkModule.m */; };
 		44180C691E7A5F7C00742AAC /* BranchNaviVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 44180C681E7A5F7C00742AAC /* BranchNaviVC.m */; };
+		44D8CE001E7B73120015EE5D /* LoginNavi.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D8CDFF1E7B73120015EE5D /* LoginNavi.m */; };
+		44D8CE261E7BAF380015EE5D /* InsertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D8CE251E7BAF380015EE5D /* InsertViewController.m */; };
+		44D8CE291E7E84D70015EE5D /* PostData.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D8CE281E7E84D70015EE5D /* PostData.m */; };
+		44D8CE321E7F18D10015EE5D /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D8CE311E7F18D10015EE5D /* PostViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,8 +34,6 @@
 		44180C331E794A4500742AAC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		44180C351E794A4500742AAC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		44180C361E794A4500742AAC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		44180C381E794A4500742AAC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		44180C391E794A4500742AAC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		44180C3C1E794A4500742AAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		44180C3E1E794A4500742AAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44180C411E794A4500742AAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +57,14 @@
 		44180C651E7A51FB00742AAC /* NetworkModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkModule.m; sourceTree = "<group>"; };
 		44180C671E7A5F7C00742AAC /* BranchNaviVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BranchNaviVC.h; sourceTree = "<group>"; };
 		44180C681E7A5F7C00742AAC /* BranchNaviVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BranchNaviVC.m; sourceTree = "<group>"; };
+		44D8CDFE1E7B73120015EE5D /* LoginNavi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginNavi.h; sourceTree = "<group>"; };
+		44D8CDFF1E7B73120015EE5D /* LoginNavi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginNavi.m; sourceTree = "<group>"; };
+		44D8CE241E7BAF380015EE5D /* InsertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsertViewController.h; sourceTree = "<group>"; };
+		44D8CE251E7BAF380015EE5D /* InsertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsertViewController.m; sourceTree = "<group>"; };
+		44D8CE271E7E84D70015EE5D /* PostData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostData.h; sourceTree = "<group>"; };
+		44D8CE281E7E84D70015EE5D /* PostData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostData.m; sourceTree = "<group>"; };
+		44D8CE301E7F18D10015EE5D /* PostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostViewController.h; sourceTree = "<group>"; };
+		44D8CE311E7F18D10015EE5D /* PostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,31 +97,20 @@
 		44180C311E794A4500742AAC /* NetworkPractice */ = {
 			isa = PBXGroup;
 			children = (
-				44180C5C1E796E8600742AAC /* DataCenter.h */,
-				44180C5D1E796E8600742AAC /* DataCenter.m */,
-				44180C641E7A51FB00742AAC /* NetworkModule.h */,
-				44180C651E7A51FB00742AAC /* NetworkModule.m */,
 				44180C351E794A4500742AAC /* AppDelegate.h */,
 				44180C361E794A4500742AAC /* AppDelegate.m */,
-				44180C381E794A4500742AAC /* ViewController.h */,
-				44180C391E794A4500742AAC /* ViewController.m */,
-				44180C4B1E794DE500742AAC /* MainCollectionVC.h */,
-				44180C4C1E794DE500742AAC /* MainCollectionVC.m */,
-				44180C511E794EB300742AAC /* MainCollectionViewCell.h */,
-				44180C521E794EB300742AAC /* MainCollectionViewCell.m */,
-				44180C531E794EB300742AAC /* MainCollectionViewCell.xib */,
-				44180C561E7956E600742AAC /* LoginViewController.h */,
-				44180C571E7956E600742AAC /* LoginViewController.m */,
-				44180C611E7A50A400742AAC /* SignupViewViewController.h */,
-				44180C621E7A50A400742AAC /* SignupViewViewController.m */,
-				44180C591E7966A000742AAC /* ProfileViewController.h */,
-				44180C5A1E7966A000742AAC /* ProfileViewController.m */,
-				44180C671E7A5F7C00742AAC /* BranchNaviVC.h */,
-				44180C681E7A5F7C00742AAC /* BranchNaviVC.m */,
-				44180C5F1E7971E300742AAC /* free.jpg */,
+				44D8CE2A1E7F121B0015EE5D /* Data and Network */,
+				44D8CE2E1E7F12820015EE5D /* Navigation */,
+				44D8CE2B1E7F12450015EE5D /* MainVC */,
+				44D8CE2C1E7F12590015EE5D /* Login */,
+				44D8CE2D1E7F12730015EE5D /* Profile */,
+				44D8CE2F1E7F12C20015EE5D /* InsertPost */,
 				44180C491E794AFC00742AAC /* Login.storyboard */,
 				44180C3B1E794A4500742AAC /* Main.storyboard */,
+				44D8CE301E7F18D10015EE5D /* PostViewController.h */,
+				44D8CE311E7F18D10015EE5D /* PostViewController.m */,
 				44180C3E1E794A4500742AAC /* Assets.xcassets */,
+				44180C5F1E7971E300742AAC /* free.jpg */,
 				44180C401E794A4500742AAC /* LaunchScreen.storyboard */,
 				44180C431E794A4500742AAC /* Info.plist */,
 				44180C321E794A4500742AAC /* Supporting Files */,
@@ -126,6 +124,71 @@
 				44180C331E794A4500742AAC /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		44D8CE2A1E7F121B0015EE5D /* Data and Network */ = {
+			isa = PBXGroup;
+			children = (
+				44180C5C1E796E8600742AAC /* DataCenter.h */,
+				44180C5D1E796E8600742AAC /* DataCenter.m */,
+				44180C641E7A51FB00742AAC /* NetworkModule.h */,
+				44180C651E7A51FB00742AAC /* NetworkModule.m */,
+				44D8CE271E7E84D70015EE5D /* PostData.h */,
+				44D8CE281E7E84D70015EE5D /* PostData.m */,
+			);
+			name = "Data and Network";
+			sourceTree = "<group>";
+		};
+		44D8CE2B1E7F12450015EE5D /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				44180C4B1E794DE500742AAC /* MainCollectionVC.h */,
+				44180C4C1E794DE500742AAC /* MainCollectionVC.m */,
+				44180C511E794EB300742AAC /* MainCollectionViewCell.h */,
+				44180C521E794EB300742AAC /* MainCollectionViewCell.m */,
+				44180C531E794EB300742AAC /* MainCollectionViewCell.xib */,
+			);
+			name = MainVC;
+			sourceTree = "<group>";
+		};
+		44D8CE2C1E7F12590015EE5D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				44180C561E7956E600742AAC /* LoginViewController.h */,
+				44180C571E7956E600742AAC /* LoginViewController.m */,
+				44180C611E7A50A400742AAC /* SignupViewViewController.h */,
+				44180C621E7A50A400742AAC /* SignupViewViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		44D8CE2D1E7F12730015EE5D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				44180C591E7966A000742AAC /* ProfileViewController.h */,
+				44180C5A1E7966A000742AAC /* ProfileViewController.m */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		44D8CE2E1E7F12820015EE5D /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				44D8CDFE1E7B73120015EE5D /* LoginNavi.h */,
+				44D8CDFF1E7B73120015EE5D /* LoginNavi.m */,
+				44180C671E7A5F7C00742AAC /* BranchNaviVC.h */,
+				44180C681E7A5F7C00742AAC /* BranchNaviVC.m */,
+			);
+			name = Navigation;
+			sourceTree = "<group>";
+		};
+		44D8CE2F1E7F12C20015EE5D /* InsertPost */ = {
+			isa = PBXGroup;
+			children = (
+				44D8CE241E7BAF380015EE5D /* InsertViewController.h */,
+				44D8CE251E7BAF380015EE5D /* InsertViewController.m */,
+			);
+			name = InsertPost;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44180C3A1E794A4500742AAC /* ViewController.m in Sources */,
+				44D8CE321E7F18D10015EE5D /* PostViewController.m in Sources */,
+				44D8CE291E7E84D70015EE5D /* PostData.m in Sources */,
 				44180C371E794A4500742AAC /* AppDelegate.m in Sources */,
+				44D8CE261E7BAF380015EE5D /* InsertViewController.m in Sources */,
 				44180C5E1E796E8600742AAC /* DataCenter.m in Sources */,
 				44180C581E7956E600742AAC /* LoginViewController.m in Sources */,
 				44180C631E7A50A400742AAC /* SignupViewViewController.m in Sources */,
@@ -211,6 +276,7 @@
 				44180C661E7A51FB00742AAC /* NetworkModule.m in Sources */,
 				44180C5B1E7966A000742AAC /* ProfileViewController.m in Sources */,
 				44180C341E794A4500742AAC /* main.m in Sources */,
+				44D8CE001E7B73120015EE5D /* LoginNavi.m in Sources */,
 				44180C4D1E794DE500742AAC /* MainCollectionVC.m in Sources */,
 				44180C691E7A5F7C00742AAC /* BranchNaviVC.m in Sources */,
 			);

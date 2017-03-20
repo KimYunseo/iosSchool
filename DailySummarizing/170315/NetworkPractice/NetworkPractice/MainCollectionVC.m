@@ -9,6 +9,8 @@
 #import "MainCollectionVC.h"
 #import "MainCollectionViewCell.h"
 #import "DataCenter.h"
+#import "PostData.h"
+#import "PostViewController.h"
 
 @interface MainCollectionVC ()
 <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDataSourcePrefetching>
@@ -20,93 +22,95 @@
 @implementation MainCollectionVC
 
 
-- (void)viewWillAppear:(BOOL)animated{
-    
-//     self.tempCount = [DataCenter shareData].imgUrlArray.count;
-    
-    
-}
+- (void)viewDidAppear:(BOOL)animated{
+//    [self.mainCollectioView reloadData];
+ }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self.mainCollectioView registerNib:[UINib nibWithNibName:@"MainCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"MainCollectionViewCell"];
-    // Do any additional setup after loading the view.
     
-//     NSLog(@"%@",[DataCenter shareData].imageArray) ;
-//     NSLog(@"%@",[DataCenter shareData].imageSizeArray) ;
-    [self addNotification];
-    
+    [[DataCenter shareData] dataCenterSetContent];
+    [self addNoti];
+
 }
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    NSLog(@"self.tempCount %ld", [DataCenter shareData].imgUrlArray.count);
-    return [DataCenter shareData].imgUrlArray.count;
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    
+//    [[DataCenter shareData] dataCenterSetContent];
+    return [DataCenter shareData].postData.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     MainCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MainCollectionViewCell" forIndexPath:indexPath];
-
-    if ([DataCenter shareData].widthArray.count < [DataCenter shareData].imgUrlArray.count) {
-        cell.mainImg.image = [UIImage imageNamed:@"free.jpg"];
-    } else {
-        UIImage *image = [DataCenter shareData].imageArray[indexPath.row];
-        
-        if (image) {
-
-            cell.mainImg.image = [[DataCenter shareData] imageArray][indexPath.row];
- 
-        } else {
+    
+    PostData *postData = [[DataCenter shareData].postData objectAtIndex:indexPath.row];
+    cell.nameLB.text = postData.userName;
+    cell.titleLB.text = postData.title;
+    if([postData.mainImage isEqual:[NSNull null]]) {
+        dispatch_async(dispatch_get_main_queue(), ^{
             cell.mainImg.image = [UIImage imageNamed:@"free.jpg"];
-        }
+        });
+        
+    } else {
+        
+        NSURL *imgURL = [NSURL URLWithString:postData.mainImage];
+        NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+        NSURLSessionTask *task = [session dataTaskWithURL:imgURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+            if(data) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    cell.mainImg.image = [UIImage imageWithData:data];
+                });
+            }
+        }];
+        [task resume];
     }
+
+    
     return cell;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    if ([DataCenter shareData].widthArray.count < [DataCenter shareData].imgUrlArray.count) {
-        UIImage *image = [UIImage imageNamed:@"free.jpg"];
-        CGFloat width = image.size.width;
-        CGFloat height = image.size.height;
-        CGFloat m = (self.mainCollectioView.frame.size.width-10)/2;
-        CGFloat ratio = height/width;
-        return CGSizeMake(m , m * ratio);
-    } else {
-            CGFloat width = [[DataCenter shareData].widthArray[indexPath.row] floatValue];
-            CGFloat height = [[DataCenter shareData].heightArray[indexPath.row] floatValue];
-            CGFloat m = (self.mainCollectioView.frame.size.width-10)/2;
-            CGFloat ratio = height/width;
-        return CGSizeMake(m , m * ratio);
-    }
-    
-    
-}
-
-- (void)addNotification{
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notiAction:) name:@"imageDown" object:nil];
-    
-}
-
-- (void)notiAction:(NSNotification *)sender{
-    
-    [self.mainCollectioView reloadData];
-    NSLog(@"노티 실행됐다.");
-    
+    CGFloat m = (self.mainCollectioView.frame.size.width-10)/2;
+    CGFloat h = self.mainCollectioView.frame.size.height/2.5;
+    return CGSizeMake(m, h);
 }
 
 
 
 - (void)collectionView:(UICollectionView *)collectionView prefetchItemsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths{
     
-//    [self.mainCollectioView reloadData];
+
     
 }
 
-- (void)dealloc{
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    [[NSNotificationCenter defaultCenter] removeObserver:@"imageDown"];
+    [self performSegueWithIdentifier:@"PostSegue" sender:indexPath];
+   
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if([segue.identifier isEqualToString:@"PostSegue"]) {
+    // PostSegue에 연결된 viewcontroller를 가져 온다
+        PostViewController *vc = [segue destinationViewController];
+    // 프로퍼티인 index에 indexpath값을 넣어 준다.
+        vc.index = (NSIndexPath *)sender;
+    }
+    
+}
+
+- (void)addNoti{
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notiAction:) name:@"PostList" object:nil];
+    NSLog(@"addNoti");
+}
+
+- (void)notiAction:(NSNotification *)sender{
+    
+    [self.mainCollectioView reloadData];
     
 }
 

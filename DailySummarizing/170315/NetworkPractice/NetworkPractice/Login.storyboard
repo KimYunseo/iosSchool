@@ -51,7 +51,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="C9t-Sf-yrY" kind="presentation" id="pFt-hY-GK7"/>
+                                    <segue destination="C9t-Sf-yrY" kind="show" id="pFt-hY-GK7"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Co-f6-pFD">
@@ -167,7 +167,7 @@ Your Account</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2842.4000000000001" y="34.632683658170919"/>
+            <point key="canvasLocation" x="3781.5999999999999" y="34.632683658170919"/>
         </scene>
         <!--Signup View View Controller-->
         <scene sceneID="Vdl-qF-HDo">
@@ -337,7 +337,25 @@ New Account</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QjA-HG-mZN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3570.4000000000001" y="34.632683658170919"/>
+            <point key="canvasLocation" x="4509.6000000000004" y="34.632683658170919"/>
+        </scene>
+        <!--Login Navi-->
+        <scene sceneID="q2g-hM-zaS">
+            <objects>
+                <navigationController storyboardIdentifier="LoginNavi" automaticallyAdjustsScrollViewInsets="NO" id="zau-4b-Str" customClass="LoginNavi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EbB-Lz-S5b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xtZ-le-pkj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="czw-SI-rSD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2842.4000000000001" y="34.632683658170919"/>
         </scene>
     </scenes>
     <resources>

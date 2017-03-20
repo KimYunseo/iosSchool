@@ -17,6 +17,8 @@
 
 @implementation SignupViewViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -31,27 +33,27 @@
 }
 - (IBAction)signupAction:(id)sender {
     
-    
     if ([self.username.text isEqualToString:@""] || [self.password1.text isEqualToString:@""] || [self.password2.text isEqualToString:@""]) {
         
         NSLog(@"세곳을 모두 적어 주세요");
+        [self makeAlertViewControllerTitle:@"입력오류" setMessage:@"세곳 모두 적어 주세요!" setActionTitle:@"확인"];
         
     } else if (![self.password1.text isEqualToString:self.password2.text]) {
         
         NSLog(@"비빌 번호를 다시 확인해주세요");
+        [self makeAlertViewControllerTitle:@"입력오류" setMessage:@"비빌번호를 다식 확인해 주세요!" setActionTitle:@"확인"];
         
     } else {
-        [[DataCenter shareData] signupSessionInsertUsername:self.username.text insertPassword1:self.password1.text isertPassword2:self.password2.text loginCompletion:^(BOOL isSuccess) {
+        [[DataCenter shareData] dataCenterSignupInsertUsername:self.username.text insertPassword1:self.password1.text isertPassword2:self.password2.text loginCompletion:^(BOOL isSuccess) {
             
             if(isSuccess) {
                 
                 NSLog(@"test");
-                
                 [self dismissViewControllerAnimated:YES completion:nil];
             } else {
                 
                 NSLog(@"다시 아이디 넣으세요");
-                
+                [self makeAlertViewControllerTitle:@"입력오류" setMessage:@"동일한 아이디가 있습니다!" setActionTitle:@"확인"];
             }
             
         }];
@@ -83,6 +85,23 @@
     
     
     return YES;
+}
+
+
+
+- (void)makeAlertViewControllerTitle:(NSString *)conTitle
+                          setMessage:(NSString *)conMessage
+                      setActionTitle:(NSString *)actionTitle
+{
+    
+    UIAlertController *alerView = [UIAlertController alertControllerWithTitle:conTitle message:conMessage preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *done = [UIAlertAction actionWithTitle:actionTitle style:UIAlertActionStyleDefault handler:nil];
+    
+    [alerView addAction:done];
+    
+    [self presentViewController:alerView animated:YES completion:nil];
+    
 }
 
 

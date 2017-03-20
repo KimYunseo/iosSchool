@@ -8,6 +8,7 @@
 
 #import "ProfileViewController.h"
 #import "DataCenter.h"
+#import "LoginViewController.h"
 
 @interface ProfileViewController ()
 <UITextFieldDelegate>
@@ -15,6 +16,7 @@
 @end
 
 @implementation ProfileViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,10 +29,17 @@
 
 - (IBAction)logoutAction:(id)sender {
     
-    [[DataCenter shareData] logoutSetCompletion:^(BOOL isSuccess) {
+    [[DataCenter shareData] dataCenterLogoutSetCompletion:^(BOOL isSuccess) {
         if(!isSuccess) {
             
-            NSLog(@"로그아웃이 되었습니다.!!!!!!!!!!!!!!!!!!!!!!");
+            UIStoryboard *loginStory = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+            LoginViewController *loginVC = [loginStory instantiateViewControllerWithIdentifier:@"LoginViewController"];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                [self presentViewController:loginVC animated:YES completion:nil];
+                
+            });
+            
             
         }
     }];

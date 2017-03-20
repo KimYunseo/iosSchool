@@ -19,8 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [DataCenter shareData];
-    
+//    [DataCenter shareData];
+    NSLog(@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"Authorization"]);
 
     return YES;
 }
