@@ -23,6 +23,7 @@
 
 
 - (void)viewDidAppear:(BOOL)animated{
+//    [[DataCenter shareData] dataCenterSetContent];
 //    [self.mainCollectioView reloadData];
  }
 
@@ -38,14 +39,14 @@
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
 //    [[DataCenter shareData] dataCenterSetContent];
-    return [DataCenter shareData].postData.count;
+    return [DataCenter shareData].postDataArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     MainCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MainCollectionViewCell" forIndexPath:indexPath];
     
-    PostData *postData = [[DataCenter shareData].postData objectAtIndex:indexPath.row];
+    PostData *postData = [[DataCenter shareData].postDataArray objectAtIndex:indexPath.row];
     cell.nameLB.text = postData.userName;
     cell.titleLB.text = postData.title;
     if([postData.mainImage isEqual:[NSNull null]]) {
@@ -67,6 +68,12 @@
         [task resume];
     }
 
+    // 디버그 모드일 때만 돌릴 때 사용
+#ifdef DEBUG
+    
+    NSLog(@"디버그 모드일 때");
+    
+#endif
     
     return cell;
 }
@@ -113,6 +120,8 @@
     [self.mainCollectioView reloadData];
     
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -23,23 +23,23 @@
     //NSUserDefaults에 Authorization에 대한 값이 logout 아닐경우 뷰컨트롤러를 해제시킨다.
     
     
-    NSString *token = @"";
-    token = [[NSUserDefaults standardUserDefaults] objectForKey:@"Authorization"];
-    if ((NSInteger)token == 0) {
-        NSLog(@"뷰 윌 어피어!!!");
-        
-    } else {
-        
-        
-        NSLog(@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"Authorization"]);
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self dismissViewControllerAnimated:YES completion:nil];
-        });
-        
-        
-        NSLog(@"디스미스!!!!");
-        
-    }
+//    NSString *token = @"";
+//    token = [[NSUserDefaults standardUserDefaults] objectForKey:@"Authorization"];
+//    if ((NSInteger)token == 0) {
+//        NSLog(@"뷰 윌 어피어!!!");
+//        
+//    } else {
+//        
+//        
+//        NSLog(@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"Authorization"]);
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            [self dismissViewControllerAnimated:YES completion:nil];
+//        });
+//        
+//        
+//        NSLog(@"디스미스!!!!");
+//        
+//    }
     
     
 }
@@ -71,10 +71,10 @@
             if(isSuccess) {
                 
                 NSLog(@"test");
+                self.accessSucceese = YES;
+                [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 
-                [self dismissViewControllerAnimated:YES completion:nil];
-
-            } else if (!isSuccess || errorCode == 400){
+            } else if (!isSuccess && errorCode == 400){
                 
                 UIAlertController *alerView = [UIAlertController alertControllerWithTitle:@"로그인 에러" message:@"다시 로그인해주세요" preferredStyle:UIAlertControllerStyleAlert];
                 

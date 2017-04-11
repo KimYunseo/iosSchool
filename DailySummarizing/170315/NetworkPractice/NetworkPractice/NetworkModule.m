@@ -7,6 +7,7 @@
 //
 
 #import "NetworkModule.h"
+#import "DataCenter.h"
 
 @interface NetworkModule()
 
@@ -38,7 +39,7 @@
 {
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-    NSURL *url = [NSURL URLWithString:[BASIC_API stringByAppendingString:LOGIN_ADDRESS]];
+    NSURL *url = [NSURL URLWithString:[_BASIC_API stringByAppendingString:_LOGIN_ADDRESS]];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     
     NSString *requestData = [NSString stringWithFormat:@"username=%@&password=%@", username,password];
@@ -52,20 +53,17 @@
                 NSDictionary *responseDic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
                 NSString *token = [responseDic objectForKey:@"key"];
                 NSLog(@"토큰 값이 들어 온다. %@", token);
-                /*
-                 *NSLog(@"%ld", (NSInteger)[response statusCode]); response에 상태 코드를 알기 위한것
+                /**
+                 * NSLog(@"%ld", (NSInteger)[response statusCode]); response에 상태 코드를 알기 위한것
                  */
-                
-                [[NSUserDefaults standardUserDefaults] setObject:token forKey:@"Authorization"];
-                
+                [[NSUserDefaults standardUserDefaults] setObject:token forKey:_KEY_TOKEN];
+                [DataCenter shareData].accessToken = [[NSUserDefaults standardUserDefaults] objectForKey:_KEY_TOKEN];
                 completion(YES, (NSInteger)[httpRespose statusCode]);
             } else if ((NSInteger)[httpRespose statusCode] == 400) {
                 completion(NO, (NSInteger)[httpRespose statusCode]);
             } else {
-                
                 NSLog(@"%ld", (NSInteger)[httpRespose statusCode]);
                 completion(NO, (NSInteger)[httpRespose statusCode]);
-
             }
             
         } else {
@@ -95,10 +93,10 @@ Yun seo
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     
-    NSURL *url = [NSURL URLWithString:[BASIC_API stringByAppendingString:LOGOUT_ADDRESS]];
+    NSURL *url = [NSURL URLWithString:[_BASIC_API stringByAppendingString:_LOGOUT_ADDRESS]];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     
-    NSString *requestData = [NSString stringWithFormat:@"Token %@", [[NSUserDefaults standardUserDefaults] objectForKey:@"Authorization"]];
+    NSString *requestData = [NSString stringWithFormat:@"Token %@", [[NSUserDefaults standardUserDefaults] objectForKey:_KEY_TOKEN]];
     [request setValue:requestData forHTTPHeaderField:@"Authorization"];
     
     request.HTTPBody = [@"" dataUsingEncoding:NSUTF8StringEncoding];
@@ -108,7 +106,8 @@ Yun seo
         if (error == nil) {
             NSHTTPURLResponse *httpRespose = (NSHTTPURLResponse *) response;
             if ((NSInteger)[httpRespose statusCode] == 200) {
-                [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"Authorization"];
+                [[NSUserDefaults standardUserDefaults] setObject:nil forKey:_KEY_TOKEN];
+                [DataCenter shareData].accessToken = [[NSUserDefaults standardUserDefaults] objectForKey:_KEY_TOKEN];
                 
                 completion(NO);
             } else if ((NSInteger)[httpRespose statusCode] == 401) {
@@ -154,7 +153,7 @@ Yun seo
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     
-    NSURL *url = [NSURL URLWithString:[BASIC_API stringByAppendingString:SIGNUP_ADDRESS]];
+    NSURL *url = [NSURL URLWithString:[_BASIC_API stringByAppendingString:_SIGNUP_ADDRESS]];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     
     NSString *requestData = [NSString stringWithFormat:@"username=%@&password1=%@&password2=%@", username,password1,password2 ];
@@ -172,7 +171,9 @@ Yun seo
                  *NSLog(@"%ld", (NSInteger)[response statusCode]); response에 상태 코드를 알기 위한것
                  */
                 
-                [[NSUserDefaults standardUserDefaults] setObject:token forKey:@"Authorization"];
+                [[NSUserDefaults standardUserDefaults] setObject:token forKey:_KEY_TOKEN];
+                [DataCenter shareData].accessToken = [[NSUserDefaults standardUserDefaults] objectForKey:_KEY_TOKEN];
+                
                 
                 completion(YES);
             } else if ((NSInteger)[httpRespose statusCode] == 400) {
@@ -241,7 +242,7 @@ Yun seo
     
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-    NSURL *url = [NSURL URLWithString:[BASIC_API stringByAppendingString:POST_ADDRESS]];
+    NSURL *url = [NSURL URLWithString:[_BASIC_API stringByAppendingString:_POST_ADDRESS]];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     
     
@@ -296,7 +297,7 @@ Yun seo
 {
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-    NSURL *url = [NSURL URLWithString:[BASIC_API stringByAppendingString:POST_ADDRESS]];
+    NSURL *url = [NSURL URLWithString:[_BASIC_API stringByAppendingString:_POST_ADDRESS]];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     NSString *pageNum = page;
@@ -321,6 +322,30 @@ Yun seo
     
     [downloadTask resume];
     NSLog(@"networkModulePostListSetPage");
+    
+}
+
+
+#pragma AFNetWork
+
+- (void)afnetworkLogin{
+    
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    
+    NSURL *URL = [NSURL URLWithString:[_BASIC_API stringByAppendingString:_LOGIN_ADDRESS]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    
+    
+    NSURL *filePath = [NSURL fileURLWithPath:@"file://path/to/image.png"];
+    NSURLSessionUploadTask *uploadTask = [manager uploadTaskWithRequest:request fromFile:filePath progress:nil completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+        if (error) {
+            NSLog(@"Error: %@", error);
+        } else {
+            NSLog(@"Success: %@ %@", response, responseObject);
+        }
+    }];
+    [uploadTask resume];
     
 }
 

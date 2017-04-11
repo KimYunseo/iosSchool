@@ -7,13 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+
 #import "NetworkModule.h"
 #import "PostData.h"
 
+
+
+
+
 @interface DataCenter : NSObject
 
-@property NSMutableArray *postData;
+@property NSString *accessToken;
+@property NSMutableArray *postDataArray;
 
 + (instancetype)shareData;
 

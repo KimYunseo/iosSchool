@@ -32,15 +32,11 @@
     [[DataCenter shareData] dataCenterLogoutSetCompletion:^(BOOL isSuccess) {
         if(!isSuccess) {
             
-            UIStoryboard *loginStory = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
-            LoginViewController *loginVC = [loginStory instantiateViewControllerWithIdentifier:@"LoginViewController"];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                
-                [self presentViewController:loginVC animated:YES completion:nil];
-                
-            });
+            NSLog(@"logout1");
+            [self.navigationController dismissViewControllerAnimated:YES completion:nil];
             
-            
+        } else {
+            NSLog(@"logout2");
         }
     }];
     

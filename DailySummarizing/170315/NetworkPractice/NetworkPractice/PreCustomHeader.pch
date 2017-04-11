@@ -1,0 +1,20 @@
+//
+//  PreCustomHeader.pch
+//  NetworkPractice
+//
+//  Created by abyssinaong on 2017. 3. 24..
+//  Copyright © 2017년 KimYunseo. All rights reserved.
+//
+
+#ifndef PreCustomHeader_pch
+#define PreCustomHeader_pch
+
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+#import "StaticNetworkHeader.h"
+
+#define DeviceSystemVer [[UIDevice currentDevice] systemVersion]
+
+#endif /* PreCustomHeader_pch */

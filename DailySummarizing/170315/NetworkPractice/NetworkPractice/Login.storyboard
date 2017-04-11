@@ -7,10 +7,11 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!--Title-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="LoginViewController" hidesBottomBarWhenPushed="YES" id="BYZ-38-t0r" customClass="LoginViewController" sceneMemberID="viewController">
@@ -18,15 +19,15 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="S6A-MP-EgR">
+                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="S6A-MP-EgR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signIn_bg" translatesAutoresizingMaskIntoConstraints="NO" id="HRe-Tg-fmq">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTw-hv-cS3">
-                                <rect key="frame" x="27.5" y="503.5" width="320" height="50"/>
+                                <rect key="frame" x="27.5" y="452.5" width="320" height="50"/>
                                 <color key="backgroundColor" red="0.53104272799999996" green="0.92962526619999997" blue="0.65551782010000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="6hc-oR-qHg"/>
@@ -41,7 +42,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FhU-kj-at0">
-                                <rect key="frame" x="162.5" y="570.5" width="50" height="30"/>
+                                <rect key="frame" x="162.5" y="512.5" width="50" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="Mzq-TI-NYa"/>
                                     <constraint firstAttribute="height" constant="30" id="cG5-oh-lDz"/>
@@ -51,11 +52,14 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="C9t-Sf-yrY" kind="show" id="pFt-hY-GK7"/>
+                                    <segue destination="C9t-Sf-yrY" kind="show" id="pFt-hY-GK7">
+                                        <segue key="commit" inheritsFrom="parent" id="LQ3-52-eeE"/>
+                                        <segue key="preview" inheritsFrom="commit" id="nfU-uq-hKJ"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Co-f6-pFD">
-                                <rect key="frame" x="26" y="98" width="323" height="105.5"/>
+                                <rect key="frame" x="26" y="142" width="323" height="96"/>
                                 <string key="text">Sign into 
 Your Account</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="31"/>
@@ -64,7 +68,7 @@ Your Account</string>
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ic1-Wh-umM" userLabel="PwView">
-                                <rect key="frame" x="27" y="422" width="320" height="60"/>
+                                <rect key="frame" x="27" y="377" width="320" height="60"/>
                                 <subviews>
                                     <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g2r-xx-Xmm" userLabel="LineView">
                                         <rect key="frame" x="0.0" y="59.5" width="320" height="1"/>
@@ -95,7 +99,7 @@ Your Account</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qV8-yl-JuU" userLabel="IdView">
-                                <rect key="frame" x="27.5" y="355" width="320" height="60"/>
+                                <rect key="frame" x="27.5" y="317" width="320" height="60"/>
                                 <subviews>
                                     <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ob-WJ-Zvz" userLabel="LineView">
                                         <rect key="frame" x="0.0" y="59.41102362204731" width="320" height="0.99999999999998579"/>
@@ -121,7 +125,7 @@ Your Account</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or sign up" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kk2-pu-7Ps">
-                                <rect key="frame" x="26" y="204" width="323" height="20"/>
+                                <rect key="frame" x="26" y="238.5" width="323" height="20"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -157,7 +161,7 @@ Your Account</string>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
-                    <navigationItem key="navigationItem" id="O9A-fp-0hA"/>
+                    <navigationItem key="navigationItem" title="Title" id="wB1-T6-yUs"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
@@ -167,9 +171,9 @@ Your Account</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3781.5999999999999" y="34.632683658170919"/>
+            <point key="canvasLocation" x="4720.8000000000002" y="34.632683658170919"/>
         </scene>
-        <!--Signup View View Controller-->
+        <!--Title-->
         <scene sceneID="Vdl-qF-HDo">
             <objects>
                 <viewController storyboardIdentifier="SignUpViewController" id="C9t-Sf-yrY" customClass="SignupViewViewController" sceneMemberID="viewController">
@@ -177,15 +181,15 @@ Your Account</string>
                         <viewControllerLayoutGuide type="top" id="xTI-Vz-vJq"/>
                         <viewControllerLayoutGuide type="bottom" id="wwl-qe-1oK"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="PAj-hk-nrw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="PAj-hk-nrw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signIn_bg" translatesAutoresizingMaskIntoConstraints="NO" id="b6Y-ui-6MP">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="559"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CjE-yH-LLA">
-                                <rect key="frame" x="26" y="98" width="323" height="78"/>
+                                <rect key="frame" x="26" y="142" width="323" height="78"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="78" id="93r-gG-36n"/>
                                 </constraints>
@@ -197,7 +201,7 @@ New Account</string>
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wgg-UE-oaD" userLabel="IdView">
-                                <rect key="frame" x="27" y="333.5" width="320" height="60"/>
+                                <rect key="frame" x="27" y="279.5" width="320" height="60"/>
                                 <subviews>
                                     <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GsE-Ms-XNz" userLabel="LineView">
                                         <rect key="frame" x="0.0" y="59.41102362204731" width="320" height="0.99999999999998579"/>
@@ -223,7 +227,7 @@ New Account</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="39X-Vi-fx6" userLabel="PwView">
-                                <rect key="frame" x="27.5" y="400" width="320" height="60"/>
+                                <rect key="frame" x="27.5" y="335.5" width="320" height="60"/>
                                 <subviews>
                                     <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L48-8m-v5y" userLabel="LineView">
                                         <rect key="frame" x="0.0" y="59.411023622047196" width="320.00000000000011" height="1"/>
@@ -249,7 +253,7 @@ New Account</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iL2-zY-VEH" userLabel="PwView">
-                                <rect key="frame" x="27" y="467" width="320" height="60"/>
+                                <rect key="frame" x="27" y="391.5" width="320" height="60"/>
                                 <subviews>
                                     <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pwq-Dg-Idk" userLabel="LineView">
                                         <rect key="frame" x="0.0" y="59.411023622047196" width="320.00000000000011" height="1"/>
@@ -275,7 +279,7 @@ New Account</string>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfI-SU-onk">
-                                <rect key="frame" x="27.5" y="545.5" width="320" height="50"/>
+                                <rect key="frame" x="27.5" y="448" width="320" height="50"/>
                                 <color key="backgroundColor" red="0.53104272799999996" green="0.92962526619999997" blue="0.65551782010000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="NUW-ra-cQf"/>
@@ -290,7 +294,7 @@ New Account</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or sign up" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEI-7t-jtk">
-                                <rect key="frame" x="26" y="184" width="323" height="20"/>
+                                <rect key="frame" x="26" y="228" width="323" height="20"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -329,6 +333,9 @@ New Account</string>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="5Th-jH-4og"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="password1" destination="0zG-wQ-JEp" id="JQk-lc-5Zq"/>
                         <outlet property="password2" destination="6L2-2G-Mv8" id="40z-yG-yns"/>
@@ -337,12 +344,13 @@ New Account</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QjA-HG-mZN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4509.6000000000004" y="34.632683658170919"/>
+            <point key="canvasLocation" x="5448.8000000000002" y="34.632683658170919"/>
         </scene>
-        <!--Login Navi-->
+        <!--Item-->
         <scene sceneID="q2g-hM-zaS">
             <objects>
                 <navigationController storyboardIdentifier="LoginNavi" automaticallyAdjustsScrollViewInsets="NO" id="zau-4b-Str" customClass="LoginNavi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="LpW-TO-R1o"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EbB-Lz-S5b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -355,10 +363,13 @@ New Account</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="czw-SI-rSD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2842.4000000000001" y="34.632683658170919"/>
+            <point key="canvasLocation" x="3781.5999999999999" y="34.632683658170919"/>
         </scene>
     </scenes>
     <resources>
         <image name="signIn_bg" width="800" height="532"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="pFt-hY-GK7"/>
+    </inferredMetricsTieBreakers>
 </document>

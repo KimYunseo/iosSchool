@@ -7,12 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AFNetworking.h>
+@class DataCenter;
 
-static NSString * const BASIC_API = @"https://fc-ios.lhy.kr/api";
-static NSString * const SIGNUP_ADDRESS = @"/member/signup/";
-static NSString * const LOGIN_ADDRESS = @"/member/login/";
-static NSString * const LOGOUT_ADDRESS = @"/member/logout/";
-static NSString * const POST_ADDRESS = @"/post/";
+
 
 @interface NetworkModule : NSObject
 

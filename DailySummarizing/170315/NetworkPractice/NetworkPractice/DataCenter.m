@@ -51,11 +51,10 @@
 - (void)datacenterPropertyInit{
 
     self.network = [[NetworkModule alloc] init];
-    self.postData = [[NSMutableArray alloc] init];
+    self.postDataArray = [[NSMutableArray alloc] init];
+    self.accessToken = [[NSUserDefaults standardUserDefaults] objectForKey:_KEY_TOKEN];
     
 }
-
-
 
 /**
  로그인 할 경우의 메소드.
@@ -147,8 +146,7 @@
                       insertImage:(UIImage *)image
                   multiComplition:(void(^)(BOOL isSuccess))complition
 {
-    NSData *imageData = [[NSData alloc] init];
-    imageData = UIImageJPEGRepresentation(image, 0.1);
+    NSData *imageData = UIImageJPEGRepresentation(image, 0.1);
     
     [self.network networkModuleMultipartfromPostCreat:title setContent:content setImage:imageData mulitiComplition:complition];
     
@@ -171,7 +169,7 @@
         for (NSDictionary *dic in array) {
             
             PostData *temp = [[PostData alloc] initWithPost:dic];
-            [self.postData addObject:temp];
+            [self.postDataArray addObject:temp];
         }
         
         if (isDone) {

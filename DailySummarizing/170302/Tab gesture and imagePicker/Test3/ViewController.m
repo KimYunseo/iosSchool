@@ -25,9 +25,6 @@
     UITapGestureRecognizer *tapGest = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
     [self.view addGestureRecognizer:tapGest];
     
-    
-    
-    
 }
 
 //화면을 탭 했을 때 일어나는 행위
@@ -37,23 +34,19 @@
     
     //사진을 찍는 alert action을 넣는다.
     UIAlertAction *currentBtn = [UIAlertAction actionWithTitle:@"사진찍을거임" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        
         UIImagePickerController *photo = [[UIImagePickerController alloc] init];
         photo.sourceType = UIImagePickerControllerSourceTypeCamera;
         photo.delegate = self;
         [self presentViewController:photo animated:YES completion:nil];
-        
     }];
     
     //사진을 라이브러리에서 가져오는 action
     UIAlertAction *photo = [UIAlertAction actionWithTitle:@"사진가져올거임" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        
         UIImagePickerController *cameraCont = [[UIImagePickerController alloc] init];
         cameraCont.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
         cameraCont.allowsEditing = NO;
         cameraCont.delegate = self;
         [self presentViewController:cameraCont animated:YES completion:nil];
-        
     }];
     
     // cancel action
@@ -70,8 +63,6 @@
 
 //이미지 선택했을 때의 이미지를 imageView에 넣는 메서드
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
-    
-    
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
     self.imgGO.image = image;
     
@@ -80,7 +71,6 @@
 
 //image picker에서 캔슬했을 때의 메소드
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
-    
     [picker dismissViewControllerAnimated:YES completion:nil];
     
 }

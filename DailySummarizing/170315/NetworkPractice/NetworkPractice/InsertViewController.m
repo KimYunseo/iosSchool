@@ -66,13 +66,17 @@
     
 }
 - (IBAction)saveAction:(id)sender {
-    
+    [self.insertTitle resignFirstResponder];
+    [self.insertContent resignFirstResponder];
     [[DataCenter shareData] dataCenterMultipartInsert:self.insertTitle.text insertContent:self.insertContent.text insertImage:self.insertImage.image multiComplition:^(BOOL isSuccess) {
         if (isSuccess) {
+            
+            [self makeAlertViewControllerTitle:@"저장되었습니다." setMessage:@"저장되었습니다." setActionTitle:@"확인"];
             
             NSLog(@"저장 되었습니다.");
             
         } else {
+            [self makeAlertViewControllerTitle:@"저장 실패" setMessage:@"저장 실패했습니다." setActionTitle:@"확인"];
             
             NSLog(@"저장 실패");
             
@@ -80,6 +84,21 @@
         
     }];
     
+    
+}
+
+- (void)makeAlertViewControllerTitle:(NSString *)conTitle
+                          setMessage:(NSString *)conMessage
+                      setActionTitle:(NSString *)actionTitle
+{
+    
+    UIAlertController *alerView = [UIAlertController alertControllerWithTitle:conTitle message:conMessage preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *done = [UIAlertAction actionWithTitle:actionTitle style:UIAlertActionStyleDefault handler:nil];
+    
+    [alerView addAction:done];
+    
+    [self presentViewController:alerView animated:YES completion:nil];
     
 }
 

@@ -18,6 +18,7 @@
 -(void)viewDidAppear:(BOOL)animated {
     
     [super viewDidAppear:animated];
+    /*
     // NSUserDefaults에 Authorization에 대한 값이 없을 경우 로그인 페이지록 간다.
     NSString *token = @"";
     token = [[NSUserDefaults standardUserDefaults] objectForKey:@"Authorization"];
@@ -25,6 +26,7 @@
     if ((NSInteger)token == 0) {
         [self performSegueWithIdentifier:@"LoginSegue" sender:nil];
     }
+     */
 }
 
 - (void)viewDidLoad {

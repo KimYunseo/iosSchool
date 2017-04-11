@@ -34,7 +34,7 @@
     NSLog(@"%@", self.index);
     
     self.view.backgroundColor = [UIColor whiteColor];
-    PostData *postData = [[DataCenter shareData].postData objectAtIndex:self.index.row];
+    PostData *postData = [[DataCenter shareData].postDataArray objectAtIndex:self.index.row];
     
     self.userName.text = postData.userName;
     self.mainContent.text = postData.contentText;

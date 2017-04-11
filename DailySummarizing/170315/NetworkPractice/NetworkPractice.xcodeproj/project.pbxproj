@@ -27,9 +27,12 @@
 		44D8CE261E7BAF380015EE5D /* InsertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D8CE251E7BAF380015EE5D /* InsertViewController.m */; };
 		44D8CE291E7E84D70015EE5D /* PostData.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D8CE281E7E84D70015EE5D /* PostData.m */; };
 		44D8CE321E7F18D10015EE5D /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D8CE311E7F18D10015EE5D /* PostViewController.m */; };
+		44D8CE661E81219A0015EE5D /* BranchTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D8CE651E81219A0015EE5D /* BranchTabBarViewController.m */; };
+		E6C302C510162B37D0EE7CEF /* libPods-NetworkPractice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBF268766D4FF4A812ABAC81 /* libPods-NetworkPractice.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10FF84C3C096AFBF6B2F439F /* Pods-NetworkPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkPractice.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkPractice/Pods-NetworkPractice.release.xcconfig"; sourceTree = "<group>"; };
 		44180C2F1E794A4500742AAC /* NetworkPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44180C331E794A4500742AAC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		44180C351E794A4500742AAC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -57,6 +60,8 @@
 		44180C651E7A51FB00742AAC /* NetworkModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkModule.m; sourceTree = "<group>"; };
 		44180C671E7A5F7C00742AAC /* BranchNaviVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BranchNaviVC.h; sourceTree = "<group>"; };
 		44180C681E7A5F7C00742AAC /* BranchNaviVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BranchNaviVC.m; sourceTree = "<group>"; };
+		44D619E91E84E0F40088FA2B /* PreCustomHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreCustomHeader.pch; sourceTree = "<group>"; };
+		44D619EA1E84E3A90088FA2B /* StaticNetworkHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StaticNetworkHeader.h; sourceTree = "<group>"; };
 		44D8CDFE1E7B73120015EE5D /* LoginNavi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginNavi.h; sourceTree = "<group>"; };
 		44D8CDFF1E7B73120015EE5D /* LoginNavi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginNavi.m; sourceTree = "<group>"; };
 		44D8CE241E7BAF380015EE5D /* InsertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsertViewController.h; sourceTree = "<group>"; };
@@ -65,6 +70,10 @@
 		44D8CE281E7E84D70015EE5D /* PostData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostData.m; sourceTree = "<group>"; };
 		44D8CE301E7F18D10015EE5D /* PostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostViewController.h; sourceTree = "<group>"; };
 		44D8CE311E7F18D10015EE5D /* PostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostViewController.m; sourceTree = "<group>"; };
+		44D8CE641E81219A0015EE5D /* BranchTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BranchTabBarViewController.h; sourceTree = "<group>"; };
+		44D8CE651E81219A0015EE5D /* BranchTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BranchTabBarViewController.m; sourceTree = "<group>"; };
+		62184D428FE190F651D9AA1A /* Pods-NetworkPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkPractice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkPractice/Pods-NetworkPractice.debug.xcconfig"; sourceTree = "<group>"; };
+		CBF268766D4FF4A812ABAC81 /* libPods-NetworkPractice.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NetworkPractice.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6C302C510162B37D0EE7CEF /* libPods-NetworkPractice.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +93,8 @@
 			children = (
 				44180C311E794A4500742AAC /* NetworkPractice */,
 				44180C301E794A4500742AAC /* Products */,
+				7D49EAED0AA294A3520DCC50 /* Pods */,
+				7EDB54E565E2C68FDA96D8C0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,16 +111,12 @@
 			children = (
 				44180C351E794A4500742AAC /* AppDelegate.h */,
 				44180C361E794A4500742AAC /* AppDelegate.m */,
+				44D619E91E84E0F40088FA2B /* PreCustomHeader.pch */,
+				44D619EA1E84E3A90088FA2B /* StaticNetworkHeader.h */,
+				44D8CE601E811A4B0015EE5D /* ViewController */,
 				44D8CE2A1E7F121B0015EE5D /* Data and Network */,
-				44D8CE2E1E7F12820015EE5D /* Navigation */,
-				44D8CE2B1E7F12450015EE5D /* MainVC */,
-				44D8CE2C1E7F12590015EE5D /* Login */,
-				44D8CE2D1E7F12730015EE5D /* Profile */,
-				44D8CE2F1E7F12C20015EE5D /* InsertPost */,
 				44180C491E794AFC00742AAC /* Login.storyboard */,
 				44180C3B1E794A4500742AAC /* Main.storyboard */,
-				44D8CE301E7F18D10015EE5D /* PostViewController.h */,
-				44D8CE311E7F18D10015EE5D /* PostViewController.m */,
 				44180C3E1E794A4500742AAC /* Assets.xcassets */,
 				44180C5F1E7971E300742AAC /* free.jpg */,
 				44180C401E794A4500742AAC /* LaunchScreen.storyboard */,
@@ -139,7 +147,7 @@
 			name = "Data and Network";
 			sourceTree = "<group>";
 		};
-		44D8CE2B1E7F12450015EE5D /* MainVC */ = {
+		44D8CE2B1E7F12450015EE5D /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				44180C4B1E794DE500742AAC /* MainCollectionVC.h */,
@@ -148,7 +156,7 @@
 				44180C521E794EB300742AAC /* MainCollectionViewCell.m */,
 				44180C531E794EB300742AAC /* MainCollectionViewCell.xib */,
 			);
-			name = MainVC;
+			name = Main;
 			sourceTree = "<group>";
 		};
 		44D8CE2C1E7F12590015EE5D /* Login */ = {
@@ -191,6 +199,55 @@
 			name = InsertPost;
 			sourceTree = "<group>";
 		};
+		44D8CE601E811A4B0015EE5D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				44D8CE621E8121390015EE5D /* Tabbar */,
+				44D8CE2E1E7F12820015EE5D /* Navigation */,
+				44D8CE2B1E7F12450015EE5D /* Main */,
+				44D8CE2C1E7F12590015EE5D /* Login */,
+				44D8CE2D1E7F12730015EE5D /* Profile */,
+				44D8CE2F1E7F12C20015EE5D /* InsertPost */,
+				44D8CE611E811A680015EE5D /* PostViewVC */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		44D8CE611E811A680015EE5D /* PostViewVC */ = {
+			isa = PBXGroup;
+			children = (
+				44D8CE301E7F18D10015EE5D /* PostViewController.h */,
+				44D8CE311E7F18D10015EE5D /* PostViewController.m */,
+			);
+			name = PostViewVC;
+			sourceTree = "<group>";
+		};
+		44D8CE621E8121390015EE5D /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				44D8CE641E81219A0015EE5D /* BranchTabBarViewController.h */,
+				44D8CE651E81219A0015EE5D /* BranchTabBarViewController.m */,
+			);
+			name = Tabbar;
+			sourceTree = "<group>";
+		};
+		7D49EAED0AA294A3520DCC50 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				62184D428FE190F651D9AA1A /* Pods-NetworkPractice.debug.xcconfig */,
+				10FF84C3C096AFBF6B2F439F /* Pods-NetworkPractice.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7EDB54E565E2C68FDA96D8C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CBF268766D4FF4A812ABAC81 /* libPods-NetworkPractice.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -198,9 +255,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 44180C461E794A4500742AAC /* Build configuration list for PBXNativeTarget "NetworkPractice" */;
 			buildPhases = (
+				C3C693D8F6A1D97B584F1F77 /* [CP] Check Pods Manifest.lock */,
 				44180C2B1E794A4500742AAC /* Sources */,
 				44180C2C1E794A4500742AAC /* Frameworks */,
 				44180C2D1E794A4500742AAC /* Resources */,
+				DC822861E5B90D9E0D23A487 /* [CP] Embed Pods Frameworks */,
+				4CD1054E705CF215C6F6E0B9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,6 +320,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4CD1054E705CF215C6F6E0B9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NetworkPractice/Pods-NetworkPractice-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3C693D8F6A1D97B584F1F77 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DC822861E5B90D9E0D23A487 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NetworkPractice/Pods-NetworkPractice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		44180C2B1E794A4500742AAC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -273,6 +381,7 @@
 				44180C581E7956E600742AAC /* LoginViewController.m in Sources */,
 				44180C631E7A50A400742AAC /* SignupViewViewController.m in Sources */,
 				44180C541E794EB300742AAC /* MainCollectionViewCell.m in Sources */,
+				44D8CE661E81219A0015EE5D /* BranchTabBarViewController.m in Sources */,
 				44180C661E7A51FB00742AAC /* NetworkModule.m in Sources */,
 				44180C5B1E7966A000742AAC /* ProfileViewController.m in Sources */,
 				44180C341E794A4500742AAC /* main.m in Sources */,
@@ -394,8 +503,10 @@
 		};
 		44180C471E794A4500742AAC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62184D428FE190F651D9AA1A /* Pods-NetworkPractice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = NetworkPractice/PreCustomHeader.pch;
 				INFOPLIST_FILE = NetworkPractice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KimYunseo.example.NetworkPractice;
@@ -405,8 +516,10 @@
 		};
 		44180C481E794A4500742AAC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10FF84C3C096AFBF6B2F439F /* Pods-NetworkPractice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = NetworkPractice/PreCustomHeader.pch;
 				INFOPLIST_FILE = NetworkPractice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KimYunseo.example.NetworkPractice;
