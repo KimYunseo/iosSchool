@@ -2,7 +2,7 @@
 ========
 
 
-1.[프로젝트]()
+1.[프로젝트](https://github.com/whalebab86/Record_IOS)
 
 2.[해커톤](https://github.com/KimYunseo/hackathon)
 
