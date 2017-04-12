@@ -50,7 +50,4 @@
  
   * [JSON](https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170208/JSON.md) 
   
-  ------------------
-  
-  
- * [자주 사용하는 메서드 정리](https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170131/todaySummary.md)
+  * [Storyboard](https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170227/storyboard/storyboard.md)
