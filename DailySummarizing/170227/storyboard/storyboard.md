@@ -82,4 +82,42 @@ UIStoryboardSegue
  * segue가 트리거 된 때,그러나 시각적 전환이 전에, 스토리보드 런타임은 현재 뷰컨트롤러에서  prepareForSegue:sender:를 호출하여 필요한 데이터를 보여질 뷰컨트롤러에 전달할 수 있다.
  * 직접 segue 객체를 생성하지 말라.
  * 대신, 스토리보드 런타임은 두 뷰 컨트롤러 사이에서 수행되어야만 할 때 segue객체를 생성한다.
- * 
+ * 원하는 경우 UIViewController의 매소드인  perform​Segue​With​Identifier:​sender:​ 를 사용하여 프로그래밍 방식으로 segue를 시작할 수 있다.
+
+* subclassing
+
+ * 앱에서 두뷰컨트롤러 간 custom 전환을 제공하는 하는 경우 UIStoryboardSegue를 subclass할 수 있다. 
+ * custom segue를 사용하기 위해, interface builder로 뷰컨트롤러 사이에 segue line을 생성하고, inspector에서 Custom으로 설정하라.
+ * inspector에 사용하기 위한 segue의 class이름을 특정해야 한다.
+ * 스토리보드 런타임이 custom segue를 감지한 때, 새로운 instance를 생성하고, 뷰컨트롤러 객체를 구성하고, segue를 준비하기 위해 뷰컨트롤러 소스에서 요청하고, segue를 수행한다.
+
+* 오버라이드 방법
+ * custom segue에서, 오버라이드가 필요한 메인 메소드는  perform 메소드 이다.
+ * sourceViewController의 뷰컨트롤러 에서 destinationViewController의 뷰컨트롤러로 시각적 전환이 수행되는 때가 되면 스토리보드 런타임은 호출한다.  
+ * 만약 custom segue subclass의 어떤 변수가 초기화가 필요한 경우, initWithIdentifier:source:destination: 메소드를 오버라이드 하고 custom implementation을 초기화 할 수 있다.
+
+* Alternatives to Subclassing 
+ * segue가 추가 정보를 저장하거나 perform 메소드 이외의 것을 제공 할 필요가없는 경우 segueWithIdentifier : source : destination : performHandler : 메소드를 대신 사용해보라.
+
+* 스토리보드 segue 초기화 메소드
+
+		- initWithIdentifier:source:destination:
+			
+		: segue 수행에 사용할 스토리 보드 구성 요소를 초기화하고 반환
+
+* segue 속성들에 접근하는 메소드
+
+		sourceViewController
+		
+		: segue의 source view controller. segue 시작
+		부분에 내용이 표시되는 뷰컨트롤러를 포함한다.
+		
+		destinationViewController
+		
+		: segue의 destination view controller. segue 끝
+		부분에 내용이 표시되는 뷰컨트롤러를 포함한다.
+		
+		identifier
+		
+		: segue 객체의 식별자. 
+
