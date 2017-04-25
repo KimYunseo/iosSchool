@@ -121,3 +121,12 @@ UIStoryboardSegue
 		
 		: segue 객체의 식별자. 
 
+* segue 수행
+
+- perform
+
+: segue에 대한 시각적 전환을 수행한다.
+
+서브 클래스들은 이 메소드를 오버라이드하여 sourceViewController의 views로부터 destinationViewController의 views의 애니메이션을 실행하기 위해 사용한다.
+
+일반적으로, 한 세트의 views에서 다음 view로 애니매이션을 설정하기 위해 UIKit 또는 Core Animation 사용한다. 

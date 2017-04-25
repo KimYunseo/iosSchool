@@ -57,13 +57,13 @@
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
     
-//    CGFloat leftInsetValue = (self.mainCollectionView.frame.size.width - self.cellLayout.itemSize.width) / 2.0f;
+    
     
     //((UICollectionViewFlowLayout *)collectionViewLayout).itemSize
     
-    UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout *)collectionViewLayout;
-    CGFloat leftInsetValue = (collectionView.frame.size.width - flowLayout.itemSize.width)/2.0f;
-    
+//    UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout *)collectionViewLayout;
+//    CGFloat leftInsetValue = (collectionView.frame.size.width - flowLayout.itemSize.width)/2.0f;
+    CGFloat leftInsetValue = (self.mainCollectionView.frame.size.width - self.cellLayout.itemSize.width) / 2.0f;
     UIEdgeInsets inset = UIEdgeInsetsMake(0, leftInsetValue, 0, leftInsetValue);
     
     return inset;
