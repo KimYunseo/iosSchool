@@ -37,5 +37,7 @@ I.알고리즘 연습
 
 ![Custom TableView](https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170219/TableViewHomework/CustomTableView%EC%97%B0%EC%8A%B5.gif?raw=true)
 
-3.Polarsteps front page
+3.[Polarsteps front page](https://github.com/KimYunseo/iosSchool/blob/master/Polarsteps)
+
+![Polarsteps front page]()
 
