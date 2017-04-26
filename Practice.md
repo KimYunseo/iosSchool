@@ -14,7 +14,7 @@ I.알고리즘 연습
 
 ![콜라츠 추측](https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170216/CollatzConjecture/%EC%BD%9C%EB%9D%BC%EC%B8%A0%20%EC%B6%94%EC%B8%A1.gif?raw=true)
 
-4.[계단알고리즘](https://github.com/KimYunseo/iosSchool/tree/master/DailySummarizing/170216/CollatzConjecture)
+4.[계단알고리즘](https://github.com/KimYunseo/iosSchool/tree/master/DailySummarizing/170217/stairs01%20%EA%B3%84%EB%8B%A8%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
 
 5.[최소공배수, 최대공약수](https://github.com/KimYunseo/iosSchool/tree/master/DailySummarizing/170221/AlgoPractice01)
 
@@ -23,6 +23,7 @@ I.알고리즘 연습
 
 7.[윤년에 따른 D-Day 구하기](https://github.com/KimYunseo/iosSchool/tree/master/DailySummarizing/170131/PracticeHard01)
 
+![윤년에 따른 D-Day 구하기](https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170131/PracticeHard01/leapYear.md)
 
 Ⅱ.objective c 연습
 
@@ -37,7 +38,7 @@ I.알고리즘 연습
 
 ![Custom TableView](https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170219/TableViewHomework/CustomTableView%EC%97%B0%EC%8A%B5.gif?raw=true)
 
-3.[Polarsteps front page](https://github.com/KimYunseo/iosSchool/blob/master/Polarsteps)
+3.[Polarsteps front page](https://github.com/KimYunseo/iosSchool/tree/master/Polarsteps)
 
-![Polarsteps front page]()
+![Polarsteps front page](https://github.com/KimYunseo/iosSchool/blob/master/Polarsteps/frontpractice.gif)
 

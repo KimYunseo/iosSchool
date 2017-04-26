@@ -21,8 +21,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     /*
-     계단 알고림즘
+     계단 알고리즘
      계단은 한 칸 또는 두 칸씩만 올라갈 수 있다.
+     이때의 경우의 수
     */
     
     //숫자를 받는 메인 텍스트 필드
@@ -73,7 +74,7 @@
 // 1, 2, 3, 5, 8, 13 ... 형식으로 값이 나타나므로 피보나치 수열에 해당된다. 이를 재귀함수로 구현하였다.
 - (NSInteger)stairsCalculrate:(NSInteger)number
 {
-    if (number ==1){
+    if (number == 1){
         return 1;
     } else if ( number == 2 ) {
         return 2;
