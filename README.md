@@ -4,7 +4,11 @@
 
 1.[프로젝트](https://github.com/whalebab86/Record_IOS)
 
+[![Video Label](http://img.youtube.com/vi/A0ARKpXVC1A/0.jpg)](https://youtu.be/A0ARKpXVC1A?t=0)
+
 2.[해커톤](https://github.com/KimYunseo/hackathon)
+
+[![Video Label](http://img.youtube.com/vi/exOTETlgWpw/0.jpg)](https://youtu.be/exOTETlgWpw?t=0)
  
 3.알고리즘 연습
 
@@ -24,10 +28,15 @@
 
  4)[계단알고리즘](https://github.com/KimYunseo/iosSchool/tree/master/DailySummarizing/170217/stairs01%20%EA%B3%84%EB%8B%A8%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
 
+![계단알고리즘](https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170217/stairs01%20%EA%B3%84%EB%8B%A8%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EA%B3%84%EB%8B%A8%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98.gif)
+
  5)[최소공배수, 최대공약수](https://github.com/KimYunseo/iosSchool/tree/master/DailySummarizing/170221/AlgoPractice01)
+
+![최소공배수, 최대공약수](https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170221/AlgoPractice01/%EC%B5%9C%EB%8C%80%EA%B3%B5%EC%95%BD%EC%88%98%EC%B5%9C%EC%86%8C%EA%B3%B5%EB%B0%B0%EC%88%98.gif)
 
  6)[특정값까지 존재하는 소수의 개수](https://github.com/KimYunseo/iosSchool/tree/master/DailySummarizing/170227/Decimal)
 
+![특정값까지 존재하는 소수의 개수](https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170227/Decimal/%EC%86%8C%EC%88%98%EA%B5%AC%ED%95%98%EA%B8%B0.gif)
 
  7)[윤년에 따른 D-Day 구하기](https://github.com/KimYunseo/iosSchool/tree/master/DailySummarizing/170131/PracticeHard01)
 
@@ -50,7 +59,7 @@
 
 ![Polarsteps front page](https://github.com/KimYunseo/iosSchool/blob/master/Polarsteps/frontpractice.gif)
 
-4)[네트워크 실습]()
+4)[네트워크 실습](https://github.com/KimYunseo/NetworkPractice)
 
 Ⅱ.프로그래밍 기초
 ============= 
@@ -94,4 +103,4 @@
   
   * [Storyboard](https://github.com/KimYunseo/iosSchool/blob/master/DailySummarizing/170227/storyboard/storyboard.md)
 
-  * [kechain]()
+  * [kechain](https://github.com/KimYunseo/iosSchool/blob/master/keychainitemwrapper_keychain_bridge.md)
