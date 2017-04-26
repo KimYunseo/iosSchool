@@ -2,11 +2,13 @@
 ========
 
 
-1.[프로젝트](https://github.com/whalebab86/Record_IOS)
+1.[Record 프로젝트](https://github.com/whalebab86/Record_IOS)
 
-[![Video Label](http://img.youtube.com/vi/A0ARKpXVC1A/0.jpg)](https://youtu.be/A0ARKpXVC1A?t=0)
+[![Video Label](http://img.youtube.com/vi/A0ARKpXVC1A/0.jpg)](https://youtu.be/A0ARKpXVC1A?t=0) 
 
-2.[해커톤](https://github.com/KimYunseo/hackathon)
+영상을 보시려면 사진을 클릭해 주세요!
+
+2.[SolGit 해커톤](https://github.com/KimYunseo/hackathon)
 
 [![Video Label](http://img.youtube.com/vi/exOTETlgWpw/0.jpg)](https://youtu.be/exOTETlgWpw?t=0)
  
